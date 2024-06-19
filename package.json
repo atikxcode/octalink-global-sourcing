@@ -10,11 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@sweetalert2/themes": "^5.0.16",
+    "aos": "^2.3.4",
+    "axios": "^1.7.2",
     "firebase": "^10.12.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.0",
+    "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
     "sort-by": "^1.2.0"
   },

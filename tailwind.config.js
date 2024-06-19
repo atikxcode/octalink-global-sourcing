@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'custom': '5px 5px 5px 5px #00000040',
+      }
+    },
   },
   plugins: [
     require('daisyui'),
