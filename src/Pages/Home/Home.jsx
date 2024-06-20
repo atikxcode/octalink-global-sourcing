@@ -22,6 +22,8 @@ import icon3 from '../../assets/icon3.png'
 
 import image from '../../assets/nh-image-2.jpg'
 import logo from '../../assets/logo_Asset-1-1.png'
+import CountUp from 'react-countup';
+
 
 
 
@@ -43,7 +45,7 @@ const Home = () => {
       <button className="text-white text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-black hover:bg-[#797F54] duration-300">GET STARTED</button>
       <button className="text-black text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-inherit border-[1px] border-black hover:bg-[#797F54] hover:border-[#797F54] hover:text-white duration-300">CONTACT US</button>
     </div>
-    <div className="flex items-center gap-3 mb-20">
+    <div className="flex items-center gap-3 mb-36">
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaFacebookF /></p>
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaTwitter /></p>
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaInstagram /></p>
@@ -183,6 +185,41 @@ const Home = () => {
          </div>
 
       </div>
+    </div>
+
+    <div className="mb-20" data-aos="fade-up"
+     data-aos-duration="1500">
+
+      <div className="flex gap-16 items-center">
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-[#797F54] font-sans font-normal text-2xl">Years of Experience</h2>
+          <div className="divider "></div> 
+          <p className="text-[60px] font-normal"><CountUp end={25} duration={8} />+</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-[#797F54] font-sans font-normal text-2xl">Our Employees</h2>
+          <div className="divider"></div> 
+          <p className="text-[60px] font-normal"><CountUp end={150} duration={8} />+</p>
+        </div>
+
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-[#797F54] font-sans font-normal text-2xl">Successful Projects</h2>
+          <div className="divider "></div> 
+          <p className="text-[60px] font-normal"><CountUp end={400} duration={8} />+</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-[#797F54] font-sans font-normal text-2xl">Positive Reviews</h2>
+          <div className="divider "></div> 
+          <p className="text-[60px] font-normal"><CountUp end={999} duration={8} />+</p>
+        </div>
+
+
+      </div>
+
     </div>
 
     
