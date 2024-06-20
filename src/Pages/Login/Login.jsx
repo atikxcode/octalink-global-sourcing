@@ -8,70 +8,57 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
-  const {passwordReset} = useContext(AuthContext);
-  
+  const { passwordReset, logOut } = useContext(AuthContext);
   const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();
-  
   const watchedEmail = watch('email');
 
   useEffect(() => {
     Aos.init();
-  },[])
-
+  }, []);
 
   const location = useLocation();
   const navigate = useNavigate();
-  
-  // const notify = () => toast("Successfully Logged In");
-  // const notify1 = () => toast("Wrong Email Or Password");
+  const { signIn } = useContext(AuthContext);
 
-  const {signIn} = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const [currentEmail, setCurrentEmail] = useState('');
 
- 
-
-  const [showPassword, setShowPassword] = useState(false)
-  const [currentEmail, setCurrentEmail] = useState('')
-  
   useEffect(() => {
     setCurrentEmail(watchedEmail);
   }, [watchedEmail]);
 
-  console.log(currentEmail)
+  const onSubmit = data => {
+    signIn(data.email, data.password)
+      .then(result => {
+        if (result.user.emailVerified) {
+          reset();
+          navigate(location?.state ? location.state : '/');
+        } else {
+          alert('Please verify your email address to log in.');
+          logOut().then().catch();
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        // Optionally show a toast notification or alert for wrong credentials
+      });
+  };
 
+  const handlePasswordReset = () => {
+    if (!currentEmail) {
+      alert('Please enter your email address first.');
+      return;
+    }
 
-const onSubmit = data => {
-
-  signIn(data.email, data.password)
-    .then(result => {
-      console.log(result.user)
-      
-        // notify();
-     
-      setTimeout(() => {
-        navigate(location?.state ? location.state : '/');
-      }, 2000)
-      reset();
-      
-    })
-    .catch(error => {
-      console.error(error)
-      // notify1();
-    })
-};
-
-
-const handlePasswordReset =  () => {
-  passwordReset(currentEmail)
-  .then(() => {
-    // password reset email sent!
-    alert('password reset email sent! Please Check Your Mail')
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  })
-}
-
+    passwordReset(currentEmail)
+      .then(() => {
+        alert('Password reset email sent! Please check your email.');
+      })
+      .catch(error => {
+        console.error(error);
+        // Optionally handle errors
+      });
+  };
 
   return (
     <div className='pt-36 min-h-screen '>

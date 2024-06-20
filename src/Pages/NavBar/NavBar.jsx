@@ -2,11 +2,17 @@
 import { useContext, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useAxiosPublic from '../../Hooks/useAxiosPublic'
+import { useQuery } from '@tanstack/react-query';
+import logo from '../../assets/Octalink-logo-2.png'
+import './Navbar.css'
+
 
 const NavBar = () => {
 
   const {user, theme, setTheme, logOut} = useContext(AuthContext)
 
+  const axiosPublic = useAxiosPublic()
   useEffect(() => {
     localStorage.setItem('theme', theme);
     const localTheme = localStorage.getItem('theme');
@@ -25,13 +31,34 @@ const NavBar = () => {
     logOut().then().catch();
   };
 
+  const { data: userDetails, isLoading } = useQuery({
+    queryKey: ['userDetails'],
+    queryFn: async () => {
+      const res = await axiosPublic.get('/user');
+      return res.data;
+    }
+  });
+
+  const currentUser = userDetails?.find(userDetail => userDetail?.email === user?.email);
+
+  useEffect(() => {
+    if (currentUser) {
+      console.log('Current User:', currentUser);
+    }
+  }, [currentUser]); // Only log currentUser when it changes
+
+
+
   const NavOptions = <>
-          <NavLink><li><a>Item 1</a></li></NavLink>
-          <NavLink><li><a>Item 2</a></li></NavLink>
-          <NavLink><li><a>Item 3</a></li></NavLink>
+          <li className={theme === 'light' ? "text-black" : "text-white"}><NavLink to='/' activeClassName='active-link'><a>Home</a></NavLink></li>
+          <li className={theme === 'light' ? "text-black" : "text-white"}><NavLink to='/about'><a>About</a></NavLink></li>
+          <li className={theme === 'light' ? "text-black" : "text-white"}><NavLink to='/products'><a>Products</a></NavLink></li>
+          <li className={theme === 'light' ? "text-black" : "text-white"}><NavLink to='/partners'><a>partners</a></NavLink></li>
+          <li className={theme === 'light' ? "text-black" : "text-white"}><NavLink to='/contact'><a>Contact</a></NavLink></li>
+
   </>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 my-6">
     <div className="navbar-start">
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +68,7 @@ const NavBar = () => {
          {NavOptions}
         </ul>
       </div>
-      <a className="btn btn-ghost text-xl">daisyUI</a>
+      <Link to={'/'}><a className="text-xl"><img src={logo} className='h-[50px] rounded-xl' alt="" /></a></Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
@@ -53,12 +80,14 @@ const NavBar = () => {
      {
       user && (
         <div className='relative group'>
-          <img className='w-[50px] h-[50px] object-cover rounded-full'  src={user?.image} alt="" />
+          <img className='w-[50px] h-[50px] object-cover rounded-full'  src={currentUser?.image} alt="" />
           <div className='absolute -bottom-4/2 mb-12 left-1/2 transform -translate-x-3/4 opacity-0 group-hover:opacity-100 transition ease-in-out duration-200'>
-            <div>
-              <p className={theme === 'light' ? "text-black" : "text-white"}>{user?.displayName}</p>
-              <Link to='/dashboard'><button className='mt-2 px-4 py-2 rounded bg-blue-500 text-white'>Dashboard</button></Link>
-            </div>
+          {
+            currentUser?.role === "admin" && <div>
+            
+            <Link to='/dashboard'><button className={`${theme === 'light' ? 'mt-2 px-4 py-2 rounded bg-black text-white font-bold' : 'mt-2 px-4 py-2 rounded bg-white text-black font-bold'}`}>Dashboard</button></Link>
+          </div>
+          }
           </div>
         </div>
       )
@@ -66,7 +95,7 @@ const NavBar = () => {
       {user ? (
         <button
           className={`p-3 md:p-4 lg:p-4 xl:p-4 text-[13px] md:text-[14px] lg::text-[14px] xl:text-[14px] font-bold   border-0 ${
-            theme === 'light' ? 'text-white bg-black ' : 'text-black bg-white'
+            theme === 'light' ? 'text-white bg-black rounded-xl' : 'text-black bg-white rounded-xl'
           } duration-700`}
           onClick={handleSignOut}
         >
