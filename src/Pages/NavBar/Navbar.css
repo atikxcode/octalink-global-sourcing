@@ -1,4 +1,5 @@
-/* activeStyles.css */
-.activeClassName{
-  background-color:red
- }
+.active {
+  color: black;
+  border:0px;
+}
+

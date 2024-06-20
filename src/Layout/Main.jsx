@@ -5,10 +5,10 @@ import img from '../assets/nh-image-6.jpg'
 
 const Main = () => {
   return (
-    <div>
+    <div className='font-forum font-bold'>
       <NavBar></NavBar>
       <Outlet></Outlet>
-      <Footer></Footer>
+     <Footer></Footer>
     </div>
   );
 };
