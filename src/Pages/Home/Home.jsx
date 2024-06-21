@@ -385,6 +385,104 @@ const Home = () => {
       </div>
 
     </div>
+
+
+
+
+    <div className="mb-20 mt-10 w-full p-10 bg-[#f8f2e7]" data-aos="fade-up"
+     data-aos-duration="1500">
+
+      <div className="container mx-auto">
+
+      <div className="flex flex-row  gap-16">
+
+        {/* 1st part */}
+        <div className=" w-1/2">
+
+        <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3 " defaultChecked /> 
+        <div className="collapse-title text-[22px] font-medium">
+          How long has your company has been established?
+        </div>
+        <div className="collapse-content"> 
+          <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+        </div>
+      </div>
+
+        <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3 "  /> 
+        <div className="collapse-title text-[22px] font-medium">
+          How many people work at Octalink Global Sourcing
+        </div>
+        <div className="collapse-content"> 
+        <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+
+        </div>
+      </div>
+
+        <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3 " /> 
+        <div className="collapse-title text-[22px] font-medium">
+          Click to open this one and close others
+        </div>
+        <div className="collapse-content"> 
+          <p>hello</p>
+        </div>
+      </div>
+
+
+      <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3" /> 
+        <div className="collapse-title text-[22px] font-medium">
+          Click to open this one and close others
+        </div>
+        <div className="collapse-content"> 
+          <p>hello</p>
+        </div>
+      </div>
+
+      <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3" /> 
+        <div className="collapse-title text-[22px] font-medium">
+          Click to open this one and close others
+        </div>
+        <div className="collapse-content"> 
+          <p>hello</p>
+        </div>
+      </div>
+        </div>
+        {/* 2nd part */}
+
+        <div className="w-1/2 ">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px]">FAQS</h2>
+          <p className="text-5xl font-normal mb-10">Frequently Asked Questions</p>
+          <p className="font-normal text-[16px]  font-sans text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+          <div className="divider "></div> 
+
+          <div className="flex flex-row justify-between">
+            
+            <div>
+              <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">PHONE</h2>
+              <p className="text-xl font-normal mt-2 text-gray-500">+880 1999999999</p>
+              <p className="text-xl font-normal mt-2 text-gray-500">+880 1826766666</p>
+            </div>
+
+            <div>
+              <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">EMAIL</h2>
+              <p className="text-xl font-normal mt-2 text-gray-500">octalink@gmail.com</p>
+              <p className="text-xl font-normal mt-2 text-gray-500">octalinkglob@gmail.com</p>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+      </div>
+
+      </div>
+
+    </div>
    
 
  </div>
