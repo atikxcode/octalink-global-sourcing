@@ -41,6 +41,10 @@ import prodlogo6 from '../../assets/production_icon_6.png'
 
 
 
+import capture from '../../assets/trendy-brunette-woman-in-blue-blazer-sitting-on-wo-6WRKFUC.jpg'
+
+
+
 
 const Home = () => {
 
@@ -323,7 +327,64 @@ const Home = () => {
       </div>
     </div>
 
-    
+
+
+
+    <div className="mb-20 mt-10 w-full p-10 bg-[#f8f2e7]" data-aos="fade-up"
+     data-aos-duration="1500">
+
+    <div className="flex flex-col container mx-auto items-center">
+    <div className="flex flex-col  w-full gap-8 mb-10">
+        <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px]">WHY CHOOSE US</h2>
+        <p className="text-5xl font-normal mb-10 w-[500px] leading-[50px]">High Style Exceptional Service</p>
+      </div>
+
+      <div className="flex flex-row flex-start  w-full items-center gap-8">
+        {/* Left side work */}
+
+      <div className="grid grid-cols-2 gap-8 w-2/3">
+
+      <div className="flex flex-col gap-3 ">
+        <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">01.</h2>
+        <div className="divider "></div> 
+        <h2 className="text-2xl font-normal  w-[200px] text-black">Modern Process and Factory</h2>
+        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+      </div>
+
+      <div className="flex flex-col gap-3 ">
+        <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">02.</h2>
+        <div className="divider "></div> 
+        <h2 className="text-2xl font-normal  w-[200px] text-black">Professional Team and Staffs</h2>
+        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+      </div>
+
+      <div className="flex flex-col gap-3 ">
+        <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">03.</h2>
+        <div className="divider "></div> 
+        <h2 className="text-2xl font-normal  w-[200px] text-black">Best Quality Results</h2>
+        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+      </div>
+
+      <div className="flex flex-col gap-3 ">
+        <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">04.</h2>
+        <div className="divider "></div> 
+        <h2 className="text-2xl font-normal  w-[200px] text-black">24/7 Full Support</h2>
+        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+      </div>
+
+
+      </div>
+
+      {/* Right side work */}
+
+      <div className="flex justify-end w-1/3">
+        <img className="w-[400px] h-[600px]" src={capture} alt="" />
+      </div>
+    </div>
+
+      </div>
+
+    </div>
    
 
  </div>
