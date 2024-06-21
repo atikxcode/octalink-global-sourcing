@@ -24,6 +24,21 @@ import image from '../../assets/nh-image-2.jpg'
 import logo from '../../assets/logo_Asset-1-1.png'
 import CountUp from 'react-countup';
 
+import massimg from '../../assets/massproduction.jpg'
+import printimg from '../../assets/printingdesign.jpg'
+import sampimg from '../../assets/productsampling.jpg'
+import fabimg from '../../assets/fabriccatelog.jpg'
+import pattimg from '../../assets/patternmaking.jpg'
+import serimg from '../../assets/productservice.jpg'
+
+
+import prodlogo1 from '../../assets/production_icon_1.png'
+import prodlogo2 from '../../assets/production_icon_2.png'
+import prodlogo3 from '../../assets/production_icon_3.png'
+import prodlogo4 from '../../assets/production_icon_4.png'
+import prodlogo5 from '../../assets/production_icon_5.png'
+import prodlogo6 from '../../assets/production_icon_6.png'
+
 
 
 
@@ -34,10 +49,10 @@ const Home = () => {
   },[])
 
   return (
- <div className="min-h-screen">
+ <div className="min-h-screen  ">
  <div className="divider "></div> 
 
- <div className="pt-20 flex flex-col items-center gap-4">
+ <div className="pt-20 flex flex-col items-center gap-4 ">
     <h2 className="text-[#797F54] tracking-wider">OCTALINK GLOBAL SOURCING</h2>
     <p className="text-[72px] font-normal text-center">Where Sophistication and Style Meet</p>
     <p className="text-center w-[500px] text-gray-500">Discover timeless fashion crafted for the discerning and stylish. Our curated collections blend classic elegance with contemporary trends, redefining your wardrobe with every piece.</p>
@@ -146,7 +161,7 @@ const Home = () => {
     </div>
 
 
-    <div className="flex gap-10 mb-20" data-aos="fade-up"
+    <div className="flex gap-10 mb-10" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="flex flex-col items-start gap-8">
@@ -220,6 +235,92 @@ const Home = () => {
 
       </div>
 
+    </div>
+
+
+    <div className="mb-20" data-aos="fade-up"
+     data-aos-duration="1500">
+
+      <div className="flex flex-col items-center gap-8">
+
+        <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px]">OUR SERVICES</h2>
+        <p className="text-5xl font-normal mb-10">Where Sophistication and Style Meet</p>
+        
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+
+        <div className="  flex flex-col items-center bg-white">
+          <img className="w-[400px]" src={massimg} alt="" />
+          <img className="w-[60px] translate-y-[-40px]" src={prodlogo1} alt="" />
+          <div className="flex flex-col items-center gap-6 pb-6">
+          <h2 className="font-semibold text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          </div>
+        </div>
+
+
+        <div className="  flex flex-col items-center bg-white">
+          <img className="w-[400px]" src={printimg} alt="" />
+          <img className="w-[60px] translate-y-[-40px]" src={prodlogo2} alt="" />
+          <div className="flex flex-col items-center gap-6 pb-6">
+          <h2 className="font-semibold text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          </div>
+        </div>
+
+
+        <div className="  flex flex-col items-center bg-white">
+          <img className="w-[400px]" src={sampimg} alt="" />
+          <img className="w-[60px] translate-y-[-40px]" src={prodlogo3} alt="" />
+          <div className="flex flex-col items-center gap-6 pb-6">
+          <h2 className="font-semibold text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          </div>
+        </div>
+
+
+        <div className="  flex flex-col items-center bg-white">
+          <img className="w-[400px]" src={fabimg} alt="" />
+          <img className="w-[60px] translate-y-[-40px]" src={prodlogo4} alt="" />
+          <div className="flex flex-col items-center gap-6 pb-6">
+          <h2 className="font-semibold text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          </div>
+        </div>
+
+
+        <div className="  flex flex-col items-center bg-white">
+          <img className="w-[400px]" src={pattimg} alt="" />
+          <img className="w-[60px] translate-y-[-40px]" src={prodlogo5} alt="" />
+          <div className="flex flex-col items-center gap-6 pb-6">
+          <h2 className="font-semibold text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          </div>
+        </div>
+
+
+        <div className="  flex flex-col items-center bg-white">
+          <img className="w-[400px]" src={serimg} alt="" />
+          <img className="w-[60px] translate-y-[-40px]" src={prodlogo6} alt="" />
+          <div className="flex flex-col items-center gap-6 pb-6">
+          <h2 className="font-semibold text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          </div>
+        </div>
+
+
+
+        
+        </div>
+     
+     
+      </div>
     </div>
 
     
