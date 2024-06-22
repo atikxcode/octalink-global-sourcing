@@ -88,7 +88,7 @@ const Register = () => {
   };
 
   return (
-    <div className='py-20'>
+    <div className='py-20 font-sans font-normal'>
       <div className='mx-auto container' data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
         <div className="bg-white dark:bg-gray-900">
           <div className="flex justify-center h-screen">

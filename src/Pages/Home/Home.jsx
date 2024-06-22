@@ -39,9 +39,28 @@ import prodlogo4 from '../../assets/production_icon_4.png'
 import prodlogo5 from '../../assets/production_icon_5.png'
 import prodlogo6 from '../../assets/production_icon_6.png'
 
+import review1 from '../../assets/review.jpg'
+import review2 from '../../assets/review2.jpg'
+import review3 from '../../assets/review3.jpg'
 
 
 import capture from '../../assets/trendy-brunette-woman-in-blue-blazer-sitting-on-wo-6WRKFUC.jpg'
+
+import reviewimg from '../../assets/reviewbg.png'
+
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import './Home.css';
+
+import './Home.css'
+
 
 
 
@@ -383,6 +402,60 @@ const Home = () => {
     </div>
 
       </div>
+
+    </div>
+
+    <div className='h-[550px] w-full my-20 bg-fixed' style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${reviewimg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+   
+    <div className="flex items-center  w-[80%] h-full mx-auto container">
+   
+    <div className="flex  h-[60%] mx-auto container items-center  justify-center ">
+
+    <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        
+       
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div className="flex flex-col items-center gap-8 w-[70%]">
+            <p className="text-3xl font-normal text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, temporibus dignissimos dolore, et molestias facilis distinctio cupiditate eligendi aut nobis corporis, consectetur veritatis nostrum? Voluptas atque sequi nisi provident debitis!</p>
+           <div className="flex items-center flex-col">
+           <img className="" src={review1} alt="" />
+           <h2 className="font-sans font-normal">James Marksman</h2>
+           </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col items-center gap-8 w-[70%]">
+            <p className="text-3xl font-normal text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, temporibus dignissimos dolore, et molestias facilis distinctio cupiditate eligendi aut nobis corporis, consectetur veritatis nostrum? Voluptas atque sequi nisi provident debitis!</p>
+           <div className="flex items-center flex-col">
+           <img className="" src={review2} alt="" />
+           <h2 className="font-sans font-normal">James Marksman</h2>
+           </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col items-center gap-8 w-[70%]">
+            <p className="text-3xl font-normal text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, temporibus dignissimos dolore, et molestias facilis distinctio cupiditate eligendi aut nobis corporis, consectetur veritatis nostrum? Voluptas atque sequi nisi provident debitis!</p>
+           <div className="flex items-center flex-col">
+           <img className="" src={review3} alt="" />
+           <h2 className="font-sans font-normal">James Marksman</h2>
+           </div>
+          </div>
+        </SwiperSlide>
+     
+      </Swiper>
+
+    </div>
+
+    </div>
 
     </div>
 
