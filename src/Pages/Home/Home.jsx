@@ -405,7 +405,7 @@ const Home = () => {
 
     </div>
 
-    <div className='h-[550px] w-full my-20 bg-fixed' style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${reviewimg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+    <div  className='h-[550px] w-full my-20 bg-fixed' style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${reviewimg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
    
     <div className="flex items-center  w-[80%] h-full mx-auto container">
    
