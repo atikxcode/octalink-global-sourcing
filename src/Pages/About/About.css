@@ -1,0 +1,14 @@
+/* Slide-up animation */
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Tailwind CSS group-hover class with custom animation */
+.group-hover\:animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}

@@ -462,7 +462,7 @@ const Home = () => {
 
 
 
-    <div className="mb-20 mt-10 w-full p-10 bg-[#f8f2e7]" data-aos="fade-up"
+    <div className=" mt-10 w-full p-32 bg-[#f8f2e7]" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="container mx-auto">

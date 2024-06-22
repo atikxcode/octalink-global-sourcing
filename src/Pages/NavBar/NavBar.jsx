@@ -72,11 +72,7 @@ const NavBar = () => {
         PRODUCTS
       </Link>
     </li>
-    <li className={`text-gray-400 tracking-wider font-bold mr-4 ${isActive('/partners')}`}>
-      <Link to='/partners'>
-        PARTNERS
-      </Link>
-    </li>
+  
     <li className={`text-gray-400 tracking-wider font-bold mr-4 ${isActive('/contact')}`}>
       <Link to='/contact'>
         CONTACTS

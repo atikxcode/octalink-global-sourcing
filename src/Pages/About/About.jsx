@@ -13,8 +13,15 @@ import brand3 from '../../assets/brand3.png'
 import brand4 from '../../assets/brand4.png'
 import brand5 from '../../assets/brand5.png'
 import brand6 from '../../assets/brand6.png'
-import { FaChartBar, FaCog, FaLock, FaPen, FaRegUser, FaUser, FaUsers } from 'react-icons/fa';
-
+import member1 from '../../assets/members.jpg'
+import member2 from '../../assets/members2.jpg'
+import member3 from '../../assets/members3.jpg'
+import member4 from '../../assets/members4.jpg'
+import { FaChartBar, FaCog, FaFacebook, FaFacebookF, FaInstagram, FaLock, FaPen, FaRegUser, FaTwitter, FaUser, FaUsers } from 'react-icons/fa';
+import './About.css'
+import icon1 from '../../assets/icon1.png'
+import icon2 from '../../assets/icon2.png'
+import icon3 from '../../assets/icon3.png'
 
 
 const About = () => {
@@ -62,7 +69,7 @@ const About = () => {
         </div>
 
         <div>
-      <img className='w-[300px] h-[600px]' src={image2} alt="" />
+      <img className='w-[350px] h-[600px]' src={image2} alt="" />
         </div>
 
       </div>
@@ -146,6 +153,153 @@ const About = () => {
         </div>
 
       </div>
+
+
+    <div className='flex flex-col' data-aos="fade-up"
+     data-aos-duration="1500">
+
+ {/* team section */}
+    <div className=' pt-[200px] pb-[200px]  bg-[#f8f2e7]'>
+
+<div className='flex flex-col items-center mb-20 gap-10'>
+<h2 className="font-sans font-semibold tracking-[3px] text-[#797F54]">OUR TEAM</h2>
+<p className="text-5xl font-normal">Meet Our Professional Team</p>
+</div>
+
+<div className='flex  justify-between  mx-auto container '>
+
+<div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
+{/* Image */}
+<img 
+  src={member2} 
+  alt="Sample" 
+  className="w-full h-full object-cover rounded-lg"
+/>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
+  {/* <FaFacebook className="text-white text-4xl          " /> */}
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+</div>
+</div>
+
+<div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
+{/* Image */}
+<img 
+  src={member1} 
+  alt="Sample" 
+  className="w-full h-full object-cover rounded-lg"
+/>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
+  {/* <FaFacebook className="text-white text-4xl          " /> */}
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+</div>
+</div>
+
+<div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
+{/* Image */}
+<img 
+  src={member3} 
+  alt="Sample" 
+  className="w-full h-full object-cover rounded-lg"
+/>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
+  {/* <FaFacebook className="text-white text-4xl          " /> */}
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+</div>
+</div>
+
+<div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
+{/* Image */}
+<img 
+  src={member4} 
+  alt="Sample" 
+  className="w-full h-full object-cover rounded-lg"
+/>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
+  {/* <FaFacebook className="text-white text-4xl          " /> */}
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
+<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+{/* another section */}
+
+<div >
+<div className="flex flex-col gap-8  items-center pt-[250px] pb-[100px]  bg-black text-white w-full" >
+
+
+
+
+
+
+
+<div className="flex flex-col items-center gap-8" >
+<h2 className="font-sans font-semibold tracking-[6px] mb-8 text-gray-100">HOW IT WORKS</h2>
+<p className="font-forum text-3xl font-semibold tracking-[6px] mb-8 text-gray-100">Refined Style for Discerning Tastes</p>
+
+<div className="grid grid-cols-3 gap-16">
+
+  <div className="flex flex-col items-center  border-r-[1px] border-gray-600 p-4">
+    <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />
+    <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Receive Our Catalog</h2>
+    <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+    </div>
+
+  <div className="flex flex-col items-center  border-r-[1px] border-gray-600 p-4">
+    <img className="h-[60px] w-[60px] mb-5" src={icon2} alt="" />
+    <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Book Appointment</h2>
+    <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+    </div>
+
+  <div className="flex flex-col items-center   p-4">
+    <img className="h-[60px] w-[60px] mb-5" src={icon3} alt="" />
+    <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Create Your Product</h2>
+    <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+    </div>
+
+</div>
+
+<button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
+</div>
+
+
+</div>
+</div>
+
+{/* another section */}
+
+<div className='bg-[#797F54] p-32'>
+    <div className='flex flex-col items-center'>
+    <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white]">GET STARTED</h2>
+    <p className="text-[68px] text-center w-[700px] text-white font-normal">A Classic Ensemble From Head To Toe</p>
+    <button className="text-[14px] font-sans font-medium mt-10 bg-black text-white px-8 py-3 hover:text-black hover:bg-white duration-500">LEARN MORE</button>
+
+    </div>
+    </div>
+
+    </div>
+
+
+
+   
 
 
 
