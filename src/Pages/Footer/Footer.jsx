@@ -71,7 +71,7 @@ const Footer = () => {
             <Link to='/'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Home</p></Link>
             <Link to='/about'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>About</p></Link>
             <Link to='/products'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Products</p></Link>
-            <Link to='/partners'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Partners</p></Link>
+
             <Link to='/contact'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Contacts</p></Link>
             
           </div>
@@ -80,11 +80,12 @@ const Footer = () => {
           
           <div>
             <h2 className='text-3xl font-normal mb-4'>Resources</h2>
-            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Documentation</p>
-            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Privacy Policy</p>
-            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Press Files</p>
-            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>FAQs</p>
-            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Contact</p>
+            <a href=""><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Documentation</p></a>
+            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Privacy Policy</p></a>
+            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Press Files</p></a>
+            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>FAQs</p></a>
+            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Contact</p></a>
+           
           </div>
 
         </div>
