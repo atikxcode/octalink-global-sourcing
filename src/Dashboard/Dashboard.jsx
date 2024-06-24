@@ -1,22 +1,54 @@
 
 import { FaHome, FaPen, FaPlus, FaServicestack, FaUser } from 'react-icons/fa';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
+import logo from '../assets/logo_Asset-1-1.png'
+import { useContext } from 'react';
+import { AuthContext } from '../Providers/AuthProvider';
+import { useQuery } from '@tanstack/react-query';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
+
 
 
 
 const Dashboard = () => {
+
+  const axiosPublic = useAxiosPublic()
+
+  const {user} = useContext(AuthContext);
+
+  const { data: userDetails, isLoading, isError, error } = useQuery({
+    queryKey: ['userDetails'],
+    queryFn: async () => {
+      const res = await axiosPublic.get('/user');
+      return res.data;
+    }
+  });
+
+  if (isLoading) {
+    return <div className="mx-auto container flex justify-center"><span className="loading loading-dots loading-lg"></span></div>;
+  }
+  const currentUser = userDetails?.find(userDetail => userDetail?.email === user?.email);
+  
+  if (isError) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  
+
   
   return (
-    <div className='flex'>
+    <div className='flex gap-10 font-forum '>
       <aside className="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
-    <a href="#" className="mx-auto">
-        <img className="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="" />
-    </a>
+      <div className="text-xl flex items-center gap-2 justify-center">
+        <img src={logo} className='h-[50px] rounded-xl' />
+        <p className='text-white font-sans hidden md:block lg:block xl:block'>OCTALINK</p>
+        
+        </div>
 
     <div className="flex flex-col items-center mt-6 -mx-2">
-        <img className="object-cover w-24 h-24 mx-2 rounded-full" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar" />
-        <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">John Doe</h4>
-        <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">john@example.com</p>
+        <img className="object-cover w-24 h-24 mx-2 rounded-full" src={currentUser?.image} alt="avatar" />
+        <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200">{currentUser?.name}</h4>
+        <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">{currentUser?.email}</p>
     </div>
 
     <div className="flex flex-col justify-between flex-1 mt-6">

@@ -42,6 +42,7 @@ const NavBar = () => {
       return res.data;
     }
   });
+  
 
   const currentUser = userDetails?.find(userDetail => userDetail?.email === user?.email);
 
