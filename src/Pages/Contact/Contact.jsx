@@ -1,33 +1,67 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import img from '../../assets/contactimg.jpg'
 import { FaDribbble, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import 'aos/dist/aos.css'
 import Aos from "aos";
+import { AuthContext } from '../../Providers/AuthProvider';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
+import Swal from 'sweetalert2'
 
 
 
 const Contact = () => {
+
+  const axiosPublic = useAxiosPublic();
+
+  const {user} = useContext(AuthContext)
 
   useEffect(() => {
     Aos.init();
   },[])
 
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
+    defaultValues: {
+      fullName: user ? user?.displayName : '',
+      email: user ? user?.email : ''
+    }
+  });
 
   const onSubmit = data => {
-    console.log(data);
-    // Handle form submission here
+    
+    const UserMessage = {
+      userName: data.fullName,
+      userEmail: data.email,
+      userPhoneNumber: data.phone,
+      userMessage: data.message
+    }
+    console.log(UserMessage);
+    axiosPublic.post('/usermessage', UserMessage)
+    .then(res => {
+      if(res.data.insertedId){
+        reset(),
+        Swal.fire({
+          toast:true,
+
+          position: "top-end",
+          icon: "success",
+          title: "Thanks For Contacting Us. We Will Reach Out To You As Soon As Possible.",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    })
   };
 
+
   return (
-    <div className='mt-24 mb-32'>
+    <div className='mt-24 '>
 
       <div className='flex flex-col  gap-8 items-center mx-auto container'>
       <h2 className='text-5xl mb-10 font-normal'>Our Contact</h2>
-      <img className='h-[500px] w-[90%] bg-no-repeat mb-20 bg-cover bg-center rounded-lg' src={img} alt="" />
+      <img className='h-[400px] w-[90%] bg-no-repeat mb-20 bg-cover bg-center rounded-lg' src={img} alt="" />
       
       </div>
 
@@ -80,6 +114,7 @@ const Contact = () => {
             id="fullName"
             type="text"
             placeholder="Your Full Name"
+            defaultValue={user ? user.displayName : ''}
             {...register('fullName', { required: true })}
           />
           {errors.fullName && <p className="text-red-500 text-xs italic">Full Name is required.</p>}
@@ -95,6 +130,7 @@ const Contact = () => {
             id="email"
             type="email"
             placeholder="Your Email"
+            defaultValue={user ? user.email : ''}
             {...register('email', { required: true })}
           />
           {errors.email && <p className="text-red-500 text-xs italic">Email is required.</p>}
@@ -107,7 +143,7 @@ const Contact = () => {
           <input
           className="bg-inherit border-b-[1px] border-gray-400 font-normal font-sans text-lg   w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-black"
             id="phone"
-            type="tel"
+            type="number"
             placeholder="Your Phone Number"
             {...register('phone', { required: true })}
           />
@@ -146,6 +182,101 @@ const Contact = () => {
 
 
      </div>
+
+     <div className=" mt-32 mb-0 w-full p-32 bg-[#f8f2e7]" data-aos="fade-up"
+     data-aos-duration="1500">
+
+      <div className="container mx-auto">
+
+      <div className="flex flex-row  gap-16">
+
+        {/* 1st part */}
+        <div className=" w-1/2">
+
+        <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3 " defaultChecked /> 
+        <div className="collapse-title text-[22px] font-medium">
+          How long has your company has been established?
+        </div>
+        <div className="collapse-content"> 
+          <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+        </div>
+      </div>
+
+        <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3 "  /> 
+        <div className="collapse-title text-[22px] font-medium">
+          How many people work at Octalink Global Sourcing
+        </div>
+        <div className="collapse-content"> 
+        <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+
+        </div>
+      </div>
+
+        <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3 " /> 
+        <div className="collapse-title text-[22px] font-medium">
+          Click to open this one and close others
+        </div>
+        <div className="collapse-content"> 
+          <p>hello</p>
+        </div>
+      </div>
+
+
+      <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3" /> 
+        <div className="collapse-title text-[22px] font-medium">
+          Click to open this one and close others
+        </div>
+        <div className="collapse-content"> 
+          <p>hello</p>
+        </div>
+      </div>
+
+      <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
+        <input type="radio" name="my-accordion-3" /> 
+        <div className="collapse-title text-[22px] font-medium">
+          Click to open this one and close others
+        </div>
+        <div className="collapse-content"> 
+          <p>hello</p>
+        </div>
+      </div>
+        </div>
+        {/* 2nd part */}
+
+        <div className="w-1/2 ">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px]">FAQS</h2>
+          <p className="text-5xl font-normal mb-10">Frequently Asked Questions</p>
+          <p className="font-normal text-[16px]  font-sans text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+          <div className="divider "></div> 
+
+          <div className="flex flex-row justify-between">
+            
+            <div>
+              <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">PHONE</h2>
+              <p className="text-xl font-normal mt-2 text-gray-500">+880 1999999999</p>
+              <p className="text-xl font-normal mt-2 text-gray-500">+880 1826766666</p>
+            </div>
+
+            <div>
+              <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">EMAIL</h2>
+              <p className="text-xl font-normal mt-2 text-gray-500">octalink@gmail.com</p>
+              <p className="text-xl font-normal mt-2 text-gray-500">octalinkglob@gmail.com</p>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+      </div>
+
+      </div>
+
+    </div>
 
     </div>
   );

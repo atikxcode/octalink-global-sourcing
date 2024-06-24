@@ -5,6 +5,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Login = () => {
 
@@ -33,14 +34,37 @@ const Login = () => {
         if (result.user.emailVerified) {
           reset();
           navigate(location?.state ? location.state : '/');
+          Swal.fire({
+            toast:true,
+            position: "top-end",
+            icon: "success",
+            title: `Successful Login`,
+            showConfirmButton: false,
+            timer: 1500
+          });
         } else {
-          alert('Please verify your email address to log in.');
+          // alert('Please verify your email address to log in.');
+          Swal.fire({
+            toast:true,
+            position: "top-end",
+            icon: "error",
+            title: `Please verify your email address to log in.`,
+            showConfirmButton: false,
+            timer: 1500
+          });
           logOut().then().catch();
         }
       })
       .catch(error => {
         console.error(error);
-        // Optionally show a toast notification or alert for wrong credentials
+        Swal.fire({
+          toast:true,
+          position: "top-end",
+          icon: "error",
+          title: `Wrong Email Or Password.`,
+          showConfirmButton: false,
+          timer: 1500
+        });
       });
   };
 

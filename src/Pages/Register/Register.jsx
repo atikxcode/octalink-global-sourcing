@@ -64,6 +64,7 @@ const Register = () => {
                   .then(res => {
                     if (res.data.insertedId) {
                       Swal.fire({
+                        toast:true,
                         position: "top-end",
                         icon: "success",
                         title: `${userDetails.name} is Registered As New User`,

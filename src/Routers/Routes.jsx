@@ -6,12 +6,21 @@ import Register from "../Pages/Register/Register";
 import About from "../Pages/About/About";
 import Products from "../Pages/Products/Products";
 import Contact from "../Pages/Contact/Contact";
+import Dashboard from "../Dashboard/Dashboard";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import UserManage from "../Dashboard/UserManage/UserManage";
+import Profile from "../Dashboard/Profile/Profile";
+import AddProducts from "../Dashboard/AddProducts/AddProducts";
+import EditProducts from "../Dashboard/EditProducts/EditProducts";
+
+
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path:'/',
@@ -40,4 +49,28 @@ export const router = createBrowserRouter([
       }
     ]
   },
+
+{
+    path: 'dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'profile',
+        element: <Profile></Profile>
+      },
+
+      {
+        path: 'usersmanagement',
+        element: <UserManage></UserManage>
+      },
+      {
+        path: 'addproducts',
+        element: <AddProducts></AddProducts>
+      },
+      {
+        path: 'editproducts',
+        element: <EditProducts></EditProducts>
+      }
+    ]
+  }
 ]);

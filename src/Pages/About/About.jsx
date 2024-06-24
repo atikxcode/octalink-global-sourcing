@@ -79,7 +79,7 @@ const About = () => {
         <h2 className='font-sans tracking-[2px] font-semibold text-[14px] text-[#797F54]'>ABOUT OUR JOURNEY</h2>
         <p className='text-5xl text-start font-normal  text-black'>We Provide The Best Textile Industry Since 1998</p>
         <p className='text-[14px]  font-sans text-start font-semibold  text-gray-600'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptate aliquam accusamus praesentium voluptatem molestiae molestias nulla consectetur neque vero, ad autem minus nihil! Repellat quas quo pariatur et officiis iure qui, sequi, eius necessitatibus labore architecto esse optio doloremque quae? Autem non, rerum rem accusamus distinctio aliquid, ea sunt molestiae eius ut vero laborum ipsum saepe! Et officia voluptas repellat possimus facere consequuntur, dolore, consectetur culpa molestiae eos dolor nobis eveniet ipsum, alias provident! Nesciunt perspiciatis culpa aut deleniti architecto accusantium maiores voluptate odit, ut veritatis vitae quia quaerat assumenda similique ipsum cupiditate quos repudiandae inventore. Eligendi, natus et!</p>
-        <button className="text-[14px] w-1/3 text-white font-sans font-medium mt-10 bg-gray-600 translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">LEARN MORE</button>
+        <button className="text-[14px] w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">LEARN MORE</button>
       </div>
 
       </div>
@@ -166,7 +166,7 @@ const About = () => {
 <p className="text-5xl font-normal">Meet Our Professional Team</p>
 </div>
 
-<div className='flex  justify-between  mx-auto container '>
+<div className='flex justify-center items-center gap-14 mx-auto container '>
 
 <div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
 {/* Image */}
