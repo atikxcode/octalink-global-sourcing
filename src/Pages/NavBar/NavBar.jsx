@@ -4,7 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useAxiosPublic from '../../Hooks/useAxiosPublic'
 import { useQuery } from '@tanstack/react-query';
-import logo from '../../assets/logo_Asset-1-1.png'
+import logo from '../../assets/octalink_logo.png'
 import './Navbar.css'
 
 
@@ -93,7 +93,7 @@ const NavBar = () => {
       </div>
       <Link to={'/'}>
       <div className="text-xl flex items-center gap-2 ">
-        <img src={logo} className='h-[50px] rounded-xl' />
+        <img src={logo} className='h-[60px] rounded-xl' />
         <p className='font-bold hidden md:block lg:block xl:block'>OCTALINK GLOBAL <br /> SOURCING</p>
         </div></Link>
       

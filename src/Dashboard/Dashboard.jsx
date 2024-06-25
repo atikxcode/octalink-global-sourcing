@@ -37,8 +37,8 @@ const Dashboard = () => {
 
   
   return (
-    <div className='flex gap-10 font-forum '>
-      <aside className="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+    <div className='flex gap-10 font-forum'>
+      <aside className="flex font-sans flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
       <div className="text-xl flex items-center gap-2 justify-center">
         <img src={logo} className='h-[50px] rounded-xl' />
         <p className='text-white font-sans hidden md:block lg:block xl:block'>OCTALINK</p>
@@ -74,7 +74,7 @@ const Dashboard = () => {
             <NavLink to='editproducts'><a className="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" >
             <FaPen />
 
-                <span className="mx-4 font-medium">Add Products</span>
+                <span className="mx-4 font-medium">Edit Products</span>
             </a></NavLink>
 
           <div className="h-[1px] bg-white my-10"></div> 

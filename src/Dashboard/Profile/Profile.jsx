@@ -102,7 +102,7 @@ const Profile = () => {
   };
 
   return (
-    <div className='my-10 mx-auto container my-auto'>
+    <div className=' mx-auto container my-auto'>
        <form onSubmit={handleSubmit(onSubmit)}>
         <div className='flex p-4 justify-end'>
           <button  onClick={buttonUnlock} className="text-white text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-black hover:bg-[#797F54] duration-300">
@@ -146,7 +146,7 @@ const Profile = () => {
           
           <button 
               type="submit" 
-              className='mt-6 btn bg-black text-white text-sm text-center' 
+              className='mt-6 btn bg-black text-white text-sm text-center hover:bg-[#797F54] duration-500' 
               disabled={disabled}
             >
               Save
