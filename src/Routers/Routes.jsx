@@ -12,6 +12,9 @@ import UserManage from "../Dashboard/UserManage/UserManage";
 import Profile from "../Dashboard/Profile/Profile";
 import AddProducts from "../Dashboard/AddProducts/AddProducts";
 import EditProducts from "../Dashboard/EditProducts/EditProducts";
+import EditProduct from "../Dashboard/EditProducts/EditProduct";
+import UserContacts from "../Dashboard/UserContacts/UserContacts";
+
 
 
 
@@ -70,7 +73,17 @@ export const router = createBrowserRouter([
       {
         path: 'editproducts',
         element: <EditProducts></EditProducts>
-      }
+      },
+      {
+        path: 'editproduct/:id',
+        element: <EditProduct></EditProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+      },
+      {
+        path: 'usercontacts',
+        element: <UserContacts></UserContacts>
+      },
+   
     ]
   }
 ]);

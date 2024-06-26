@@ -115,7 +115,7 @@ const NavBar = () => {
           {
             currentUser?.role === "admin" && <div>
             
-            <Link to='/dashboard'><button className={`${theme === 'light' ? 'mt-2 px-4 py-2 rounded bg-black text-white font-bold' : 'mt-2 px-4 py-2 rounded bg-white text-black font-bold'}`}>Dashboard</button></Link>
+            <Link to='/dashboard'><button className='mt-2 px-4 py-2 rounded tracking-[1px] bg-black text-white font-bold hover:bg-[#797F54] duration-300'>Dashboard</button></Link>
           </div>
           }
           </div>
@@ -124,7 +124,7 @@ const NavBar = () => {
      }
       {user ? (
         <button
-          className='p-3 md:p-4 lg:p-4 xl:p-4 text-[13px] tracking-wider md:text-[14px] lg::text-[14px] xl:text-[14px] font-bold   border-0 text-white bg-black duration-700'
+          className='p-3 md:p-4 lg:p-4 xl:p-4 text-[13px] tracking-wider md:text-[14px] lg::text-[14px] xl:text-[14px] font-bold   border-0 text-white bg-black hover:bg-[#797F54] duration-300'
           onClick={handleSignOut}
         >
           SIGN OUT
@@ -132,7 +132,7 @@ const NavBar = () => {
       ) : (
         <Link to="/login">
           <button
-            className={"p-4 text-[14px] font-medium  tracking-wider border-0 text-white bg-black  "}
+            className={"p-4 text-[14px] font-medium  tracking-wider border-0 text-white bg-black hover:bg-[#797F54] duration-300 "}
           >
             GET STARTED
           </button>

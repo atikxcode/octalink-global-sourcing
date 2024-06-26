@@ -35,7 +35,8 @@ const Contact = () => {
       userName: data.fullName,
       userEmail: data.email,
       userPhoneNumber: data.phone,
-      userMessage: data.message
+      userMessage: data.message,
+      status: 'unread'
     }
     console.log(UserMessage);
     axiosPublic.post('/usermessage', UserMessage)

@@ -100,7 +100,7 @@ const onSubmit = async (data) => {
          </div>
 
          <div  className='flex flex-col items-start gap-4'>
-         <label   className="text-[14px]  tracking-[2px] font-sans text-black" >Email</label>
+         <label   className="text-[14px]  tracking-[2px] font-sans text-black" >Sub Category</label>
          <Controller
                     name="subcategory"
                     control={control}

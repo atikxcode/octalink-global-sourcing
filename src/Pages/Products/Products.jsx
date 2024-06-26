@@ -67,7 +67,7 @@ const Products = () => {
   return (
 <div className="my-20 mx-auto container min-h-screen">
   <div className="flex flex-col  mb-20 items-center">
-    <h2 className='font-sans tracking-[2px] font-semibold text-[16px] text-[#797F54]'>Luxury Fabrics, Timeless Elegance</h2>
+    <h2 className='font-sans tracking-[2px] font-semibold text-[16px] text-[#797F54] mb-8'>Luxury Fabrics, Timeless Elegance</h2>
     <p className="text-6xl font-normal text-center">Discover the Art of Quality and Craftsmanship in Every Thread</p>
   </div>
 
@@ -191,9 +191,9 @@ const Products = () => {
 {
   (selectedCategory?.length > 0 ? (selectedSubCategory?.length > 0 ? selectedSubCategory : selectedCategory) : products)?.map(product => <div key={product._id}>
     <div className=" flex flex-col items-center bg-white px-6 py-4 rounded-tl-[50px] rounded-br-[50px] hover:scale-110 duration-500">
-      <p className="uppercase tracking-[2px] mb-2 text-xl font-normal">{product?.category}</p>
+      <p className="uppercase tracking-[2px] mb-2 text-xl font-semibold font-sans">{product?.category}</p>
       <img className="h-[340px] full bg-gray-100 p-4 rounded-tl-[50px] rounded-br-[50px]" src={product?.image} alt="" />
-      <h2 className="text-[#797F54] uppercase tracking-[2px] mt-4">{product?.subcategory?.replace(/-/g, ' ')}</h2>
+      <h2 className="text-[#797F54] uppercase tracking-[2px] font-[17px] mt-4">{product?.subcategory?.replace(/-/g, ' ')}</h2>
     </div>
   </div>)
 }

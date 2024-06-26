@@ -1,5 +1,5 @@
 
-import { FaHome, FaPen, FaPlus, FaServicestack, FaUser } from 'react-icons/fa';
+import { FaCommentDots, FaHome, FaPen, FaPlus, FaServicestack, FaUser } from 'react-icons/fa';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import logo from '../assets/logo_Asset-1-1.png'
 import { useContext } from 'react';
@@ -75,6 +75,13 @@ const Dashboard = () => {
             <FaPen />
 
                 <span className="mx-4 font-medium">Edit Products</span>
+            </a></NavLink>
+
+
+            <NavLink to='usercontacts'><a className="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" >
+            <FaCommentDots />
+
+                <span className="mx-4 font-medium">User Contacts</span>
             </a></NavLink>
 
           <div className="h-[1px] bg-white my-10"></div> 
