@@ -60,6 +60,8 @@ import 'swiper/css/navigation';
 import './Home.css';
 
 import './Home.css'
+import { useQuery } from "@tanstack/react-query";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 
@@ -67,9 +69,34 @@ import './Home.css'
 
 const Home = () => {
 
+  const axiosPublic = useAxiosPublic();
+
   useEffect(() => {
     Aos.init();
   },[])
+
+  const {isPending, isError, error, refetch, data: reviews } = useQuery({
+    queryKey: ['reviews'],
+    queryFn: async () => {
+      const res = await axiosPublic.get('/reviews');
+      return res.data;
+    }
+  });
+
+
+
+  
+  if (isPending) {
+    return <div className="mx-auto container flex justify-center"><span className="loading loading-dots loading-lg"></span></div>;
+  }
+
+  // console.log(products)
+  
+
+  if (isError) {
+    return <p>Error: {error.message}</p>;
+  }
+
 
   return (
  <div className="min-h-screen  ">
@@ -160,19 +187,19 @@ const Home = () => {
         <div className="flex flex-col items-center  border-r-[1px] border-gray-600 p-4">
           <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />
           <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Receive Our Catalog</h2>
-          <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+          <p className="w-[300px] text-center leading-7 font-sans font-normal">Explore our exquisite fabric collections by requesting your free catalog today! Discover innovative designs and high-quality textiles at your fingertips.</p>       
           </div>
 
         <div className="flex flex-col items-center  border-r-[1px] border-gray-600 p-4">
           <img className="h-[60px] w-[60px] mb-5" src={icon2} alt="" />
           <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Book Appointment</h2>
-          <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+          <p className="w-[300px] text-center leading-7 font-sans font-normal">Schedule a consultation with our textile experts to find the perfect fabrics for your needs.</p>       
           </div>
 
         <div className="flex flex-col items-center   p-4">
           <img className="h-[60px] w-[60px] mb-5" src={icon3} alt="" />
           <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Create Your Product</h2>
-          <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+          <p className="w-[300px] text-center leading-7 font-sans font-normal">Design and customize your unique textile products with our expert guidance and premium materials.</p>       
           </div>
 
       </div>
@@ -184,32 +211,32 @@ const Home = () => {
     </div>
 
 
-    <div className="flex gap-10 mb-10" data-aos="fade-up"
+    <div className="flex gap-10 mb-32" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="flex flex-col items-start gap-8">
         <h2 className="text-[#797F54] font-sans font-semibold ">ABOUT OCTALINK GLOBAL SOURCING </h2>
         <h2 className="text-4xl font-normal w-[350px]">Exclusive Quality as Unique as You, Fusce accumsan ut sem.</h2>
-        <p className="w-[500px] font-sans font-normal text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac aliquam ipsum. Nullam facilisis commodo mi, eu sollicitudin orci molestie ut. Fusce accumsan ut sem ac cursus. Curabitur sodales mauris lectus, nec pellentesque urna commodo et. Proin ac diam at mi condimentum faucibus eu at metus.</p>
+        <p className="w-[500px] font-sans font-normal text-gray-500">Experience the unparalleled quality and uniqueness of our textiles. Each piece is crafted with meticulous attention to detail, ensuring a perfect blend of elegance and durability. Fusce accumsan ut sem, enhancing your designs with exceptional beauty and sophistication.</p>
         <img className="w-[500px]" src={image} alt="" />
       </div>
 
       <div className="flex flex-col items-start gap-8 translate-y-[210px]">
-        <p className="w-[500px] font-sans font-normal text-gray-500">Nulla auctor vulputate erat eget dapibus. Proin condimentum sagittis metus, eget bibendum diam. Vestibulum fermentum nulla eget posuere luctus. Nunc dignissim blandit aliquet. Mauris a urna suscipit, interdum lorem eleifend, malesuada mi. Mauris maximus pretium dignissim.</p>
+        <p className="w-[500px] font-sans font-normal text-gray-500">Our commitment to excellence ensures that every fabric stands out with distinct charm and superior craftsmanship. From vibrant patterns to subtle textures, each textile is designed to reflect your individuality. </p>
          
          <div className="flex flex-col items-start gap-2">
          <h2 className="text-3xl font-normal mb-6">Our Vision</h2>
-          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span>Nunc ante diam at nunc, posuere posuere ligula</span></p>
-          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span>Nunc ante diam at nunc, posuere posuere ligula</span></p>
-          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span>Nunc ante diam at nunc, posuere posuere ligula</span></p>
+          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Innovation and Excellence:</span> To lead the textile industry through cutting-edge designs and unparalleled quality.</span></p>
+          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Sustainability:</span> To commit to eco-friendly practices, ensuring our products are as kind to the planet as they are beautiful.</span></p>
+          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Customer-Centric Approach:</span> To prioritize our clients' needs, delivering customized solutions that exceed expectations.</span></p>
          </div>
 
 
          <div className="flex flex-col items-start gap-2">
          <h2 className="text-3xl font-normal mb-6">Our Mission</h2>
-          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span>Nunc ante diam at nunc, posuere posuere ligula</span></p>
-          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span>Nunc ante diam at nunc, posuere posuere ligula</span></p>
-          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span>Nunc ante diam at nunc, posuere posuere ligula</span></p>
+          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Quality Assurance:</span> To consistently deliver textiles of the highest standards, ensuring satisfaction and trust among our customers.</span></p>
+          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Innovation:</span>  To pioneer new trends and techniques, pushing the boundaries of textile design and production.</span></p>
+          <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Community Engagement:</span>  To support and empower our local and global communities through ethical business practices and partnerships.</span></p>
          </div>
 
          <div className="bg-black flex flex-col overflow-hidden text-white p-8 ">
@@ -276,9 +303,9 @@ const Home = () => {
           <img className="w-[400px]" src={massimg} alt="" />
           <img className="w-[60px] translate-y-[-40px]" src={prodlogo1} alt="" />
           <div className="flex flex-col items-center gap-6 pb-6">
-          <h2 className="font-semibold text-2xl">Mass Production</h2>
-          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          <h2 className="font-normal text-2xl">Mass Production</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Efficiently scale production while maintaining the highest standards of quality and craftsmanship.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
           </div>
         </div>
 
@@ -287,9 +314,9 @@ const Home = () => {
           <img className="w-[400px]" src={printimg} alt="" />
           <img className="w-[60px] translate-y-[-40px]" src={prodlogo2} alt="" />
           <div className="flex flex-col items-center gap-6 pb-6">
-          <h2 className="font-semibold text-2xl">Mass Production</h2>
-          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          <h2 className="font-normal text-2xl">Printing Design</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Transform your ideas into reality with our versatile printing design services, tailored to meet your exact specifications.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
           </div>
         </div>
 
@@ -298,9 +325,9 @@ const Home = () => {
           <img className="w-[400px]" src={sampimg} alt="" />
           <img className="w-[60px] translate-y-[-40px]" src={prodlogo3} alt="" />
           <div className="flex flex-col items-center gap-6 pb-6">
-          <h2 className="font-semibold text-2xl">Mass Production</h2>
-          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          <h2 className="font-normal text-2xl">Product Sampling</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Explore our product sampling service to experience the quality and craftsmanship of our textiles firsthand before committing to larger orders.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
           </div>
         </div>
 
@@ -309,9 +336,9 @@ const Home = () => {
           <img className="w-[400px]" src={fabimg} alt="" />
           <img className="w-[60px] translate-y-[-40px]" src={prodlogo4} alt="" />
           <div className="flex flex-col items-center gap-6 pb-6">
-          <h2 className="font-semibold text-2xl">Mass Production</h2>
-          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          <h2 className="font-normal text-2xl">Fabric Catalog</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Browse our comprehensive fabric catalog showcasing a wide range of textures, patterns, and materials to inspire your next project.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
           </div>
         </div>
 
@@ -320,9 +347,9 @@ const Home = () => {
           <img className="w-[400px]" src={pattimg} alt="" />
           <img className="w-[60px] translate-y-[-40px]" src={prodlogo5} alt="" />
           <div className="flex flex-col items-center gap-6 pb-6">
-          <h2 className="font-semibold text-2xl">Mass Production</h2>
-          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          <h2 className="font-normal text-2xl">Pattern Making</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Utilize our expert pattern making services to translate your creative concepts into precise and professional patterns for textile production.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
           </div>
         </div>
 
@@ -331,9 +358,9 @@ const Home = () => {
           <img className="w-[400px]" src={serimg} alt="" />
           <img className="w-[60px] translate-y-[-40px]" src={prodlogo6} alt="" />
           <div className="flex flex-col items-center gap-6 pb-6">
-          <h2 className="font-semibold text-2xl">Mass Production</h2>
-          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-black duration-500">LEARN MORE</button>
+          <h2 className="font-normal text-2xl">Product Service</h2>
+          <p className="text-center font-sans font-normal text-gray-600 w-[280px]">From customization to consultation, we provide tailored solutions to meet all your textile needs with expertise and dedication.</p>
+          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
           </div>
         </div>
 
@@ -367,28 +394,28 @@ const Home = () => {
         <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">01.</h2>
         <div className="divider "></div> 
         <h2 className="text-2xl font-normal  w-[200px] text-black">Modern Process and Factory</h2>
-        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+        <p className="font-sans font-normal w-[280px]">Experience our state-of-the-art facilities and advanced manufacturing processes, ensuring efficiency and quality in every textile production.</p>
       </div>
 
       <div className="flex flex-col gap-3 ">
         <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">02.</h2>
         <div className="divider "></div> 
         <h2 className="text-2xl font-normal  w-[200px] text-black">Professional Team and Staffs</h2>
-        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+        <p className="font-sans font-normal w-[280px]">Our dedicated team of experts ensures precision and excellence in every aspect of textile production, delivering unparalleled quality and service.</p>
       </div>
 
       <div className="flex flex-col gap-3 ">
         <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">03.</h2>
         <div className="divider "></div> 
         <h2 className="text-2xl font-normal  w-[200px] text-black">Best Quality Results</h2>
-        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+        <p className="font-sans font-normal w-[280px]">Achieve exceptional quality and reliability in every textile product, backed by our commitment to excellence and meticulous craftsmanship.</p>
       </div>
 
       <div className="flex flex-col gap-3 ">
         <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">04.</h2>
         <div className="divider "></div> 
         <h2 className="text-2xl font-normal  w-[200px] text-black">24/7 Full Support</h2>
-        <p className="font-sans font-normal w-[280px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+        <p className="font-sans font-normal w-[280px]">We're here round-the-clock to provide comprehensive assistance and guidance, ensuring your textile needs are met promptly and effectively.</p>
       </div>
 
 
@@ -423,33 +450,22 @@ const Home = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+       {
+        reviews.map(review => 
+          <div key={review?._id}>
+            <SwiperSlide>
           <div className="flex flex-col items-center gap-8 w-[70%]">
-            <p className="text-3xl font-normal text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, temporibus dignissimos dolore, et molestias facilis distinctio cupiditate eligendi aut nobis corporis, consectetur veritatis nostrum? Voluptas atque sequi nisi provident debitis!</p>
+            <p className="text-3xl font-normal text-gray-600">{review?.review}</p>
            <div className="flex items-center flex-col">
-           <img className="" src={review1} alt="" />
-           <h2 className="font-sans font-normal">James Marksman</h2>
+           <img className="" src={review?.photo} alt="" />
+           <h2 className="font-sans font-normal">{review?.name}</h2>
            </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col items-center gap-8 w-[70%]">
-            <p className="text-3xl font-normal text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, temporibus dignissimos dolore, et molestias facilis distinctio cupiditate eligendi aut nobis corporis, consectetur veritatis nostrum? Voluptas atque sequi nisi provident debitis!</p>
-           <div className="flex items-center flex-col">
-           <img className="" src={review2} alt="" />
-           <h2 className="font-sans font-normal">James Marksman</h2>
-           </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col items-center gap-8 w-[70%]">
-            <p className="text-3xl font-normal text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, temporibus dignissimos dolore, et molestias facilis distinctio cupiditate eligendi aut nobis corporis, consectetur veritatis nostrum? Voluptas atque sequi nisi provident debitis!</p>
-           <div className="flex items-center flex-col">
-           <img className="" src={review3} alt="" />
-           <h2 className="font-sans font-normal">James Marksman</h2>
-           </div>
-          </div>
-        </SwiperSlide>
+        )
+       }
+
      
       </Swiper>
 
@@ -478,17 +494,17 @@ const Home = () => {
           How long has your company has been established?
         </div>
         <div className="collapse-content"> 
-          <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+          <p className="font-sans font-normal">Octalink Global Sourcing has been established since 2012, bringing over a decade of experience in the textile and garment sourcing industry.</p>
         </div>
       </div>
 
         <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3 "  /> 
         <div className="collapse-title text-[22px] font-medium">
-          How many people work at Octalink Global Sourcing
+          How many people work at Octalink Global Sourcing?
         </div>
         <div className="collapse-content"> 
-        <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+        <p className="font-sans font-normal">Octalink Global Sourcing employs approximately 200 skilled professionals who are dedicated to ensuring quality and efficiency in every aspect of our operations.</p>
 
         </div>
       </div>
@@ -496,10 +512,10 @@ const Home = () => {
         <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3 " /> 
         <div className="collapse-title text-[22px] font-medium">
-          Click to open this one and close others
+        How does Octalink Global Sourcing ensure product quality?
         </div>
         <div className="collapse-content"> 
-          <p>hello</p>
+        <p className="font-sans font-normal">We maintain rigorous quality control measures at every stage of production, from sourcing raw materials to final inspection. Our team conducts thorough inspections and tests to guarantee that all products meet our high standards and client specifications.</p>
         </div>
       </div>
 
@@ -507,20 +523,20 @@ const Home = () => {
       <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3" /> 
         <div className="collapse-title text-[22px] font-medium">
-          Click to open this one and close others
+        Can Octalink Global Sourcing handle custom orders and designs?
         </div>
         <div className="collapse-content"> 
-          <p>hello</p>
+        <p className="font-sans font-normal">Yes, Octalink Global Sourcing specializes in handling custom orders and designs. We work closely with clients to understand their specific requirements and preferences, ensuring that we deliver tailor-made solutions that meet their exact needs.</p>
         </div>
       </div>
 
       <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3" /> 
         <div className="collapse-title text-[22px] font-medium">
-          Click to open this one and close others
+        How does Octalink Global Sourcing ensure timely delivery of orders?
         </div>
         <div className="collapse-content"> 
-          <p>hello</p>
+        <p className="font-sans font-normal">We prioritize efficient logistics and production planning to ensure timely delivery of orders. Our robust supply chain management and proactive communication with suppliers and clients help us anticipate and resolve any potential delays, ensuring on-time delivery of every order.</p>
         </div>
       </div>
         </div>
@@ -530,7 +546,7 @@ const Home = () => {
         <div className="flex flex-col gap-6">
           <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px]">FAQS</h2>
           <p className="text-5xl font-normal mb-10">Frequently Asked Questions</p>
-          <p className="font-normal text-[16px]  font-sans text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+          <p className="font-normal text-[16px]  font-sans text-gray-400">Explore answers to commonly asked questions about Octalink Global Sourcing to learn more about our services, products, and commitment to excellence.</p>
           <div className="divider "></div> 
 
           <div className="flex flex-row justify-between">
