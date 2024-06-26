@@ -4,7 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useAxiosPublic from '../../Hooks/useAxiosPublic'
 import { useQuery } from '@tanstack/react-query';
-import logo from '../../assets/octalink_logo.png'
+import logo from '../../assets/octalink-logo.png'
 import './Navbar.css'
 
 

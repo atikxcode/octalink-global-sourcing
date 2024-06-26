@@ -98,7 +98,7 @@ const Home = () => {
       <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3 translate-y-[-60px]">
         <p>Timeless Classics</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img1} alt="" />
-        <div className="flex flex-row text-gray-400 text-[14px] items-center justify-between font-sans font-normal  w-full">
+        <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
           <p>SUMMER</p>
           <p>OUTFIT</p>
         </div>
@@ -107,7 +107,7 @@ const Home = () => {
       <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3">
         <p>Luxury Fabrics</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img2} alt="" />
-        <div className="flex flex-row text-gray-400 text-[14px] items-center justify-between font-sans font-normal  w-full">
+        <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
           <p>WINTER</p>
           <p>OUTFIT</p>
         </div>
@@ -116,7 +116,7 @@ const Home = () => {
       <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3 translate-y-[-60px]">
         <p>Modern Elegance</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img3} alt="" />
-        <div className="flex flex-row text-gray-400 text-[14px] items-center justify-between font-sans font-normal  w-full">
+        <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
           <p>WINTER</p>
           <p>OUTFIT</p>
         </div>
@@ -125,7 +125,7 @@ const Home = () => {
       <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3">
         <p>Trendsetters</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img4} alt="" />
-        <div className="flex flex-row text-gray-400 text-[14px] items-center justify-between font-sans font-normal  w-full">
+        <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
           <p>SUMMER</p>
           <p>OUTFIT</p>
         </div>
