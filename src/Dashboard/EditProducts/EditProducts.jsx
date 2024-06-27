@@ -167,8 +167,8 @@ const EditProducts = () => {
   return (
 <div className="my-20 mx-auto container min-h-screen">
   <div className="flex flex-col  mb-20 items-center">
-    <h2 className='font-sans tracking-[2px] font-semibold text-[16px] text-[#797F54] mb-8'>Luxury Fabrics, Timeless Elegance</h2>
-    <p className="text-6xl font-normal text-center">Discover the Art of Quality and Craftsmanship in Every Thread</p>
+    <h2 className='font-sans tracking-[2px] text-center font-semibold text-[16px] text-[#797F54] mb-8'>Luxury Fabrics, Timeless Elegance</h2>
+    <p className="text-2xl md:text-5xl lg:text-6xl xl:text-6xl font-normal text-center">Discover the Art of Quality and Craftsmanship in Every Thread</p>
   </div>
 
 <div className="navbar ">
@@ -287,10 +287,10 @@ const EditProducts = () => {
 </div>
 
 
-<div className="grid grid-cols-3 my-20 gap-10">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 my-20 gap-10">
 {
   (selectedCategory?.length > 0 ? (selectedSubCategory?.length > 0 ? selectedSubCategory : selectedCategory) : products)?.map(product => <div key={product._id}>
-    <div className=" flex flex-col items-center bg-white px-6 py-4 rounded-tl-[50px] rounded-br-[50px] hover:scale-110 duration-500">
+    <div className=" flex flex-col items-center bg-white px-6 py-4 rounded-tl-[50px] rounded-br-[50px] hover:translate-y-[-20px] duration-500">
       <p className="uppercase tracking-[2px] mb-2 text-xl font-semibold font-sans">{product?.category}</p>
       <img className="h-[340px] full bg-gray-100 p-4 rounded-tl-[50px] rounded-br-[50px]" src={product?.image} alt="" />
       <div className="flex items-center  justify-around w-full">

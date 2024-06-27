@@ -102,58 +102,63 @@ const Profile = () => {
   };
 
   return (
-    <div className=' mx-auto container my-auto'>
-       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='flex p-4 justify-end'>
+    <div className=' mx-auto container my-10 md:my-20 lg:my-32 xl:my-32  h-auto'>
+       <form className='' onSubmit={handleSubmit(onSubmit)}>
+        <div className='flex p-4 justify-end md:justify-end lg:justify-end xl:justify-end w-full '>
           <button  onClick={buttonUnlock} className="text-white text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-black hover:bg-[#797F54] duration-300">
             {disabled ? 'EDIT' : 'CANCEL'}
           </button>
         </div>
 
-        <div className='flex-col md:flex lg:flex xl:flex items-center   rounded-xl shadow-custom'>
-          <div>
-            <img className='h-[200px] w-[200px] rounded-[50%] p-4' src={currentUser[0]?.image} alt="" />
-          </div>
+        
+        <div className='flex flex-col items-center justify-center rounded-xl shadow-custom mx-auto '>
+         
+         <div>
+           <img className='h-[200px] w-[200px] rounded-[50%] p-4' src={currentUser[0]?.image} alt="" />
+         </div>
 
-          <div className='flex flex-col flex-1 p-4  '>
-            <div className='flex flex-col items-start gap-4'>
-            <label  className="text-[14px]    tracking-[2px] font-sans text-black" >User Name</label>
-            <input
-              required
-              defaultValue={currentUser[0]?.name} 
-              {...register("name", {required: true})} 
-              disabled={disabled}
-              className="block w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" 
-            />
-            </div>
+         <div className='flex flex-col flex-1 p-4  '>
+           <div className='flex flex-col items-start gap-4'>
+           <label  className="text-[14px] tracking-[2px] font-sans text-black" >User Name</label>
+           <input
+             required
+             defaultValue={currentUser[0]?.name} 
+             {...register("name", {required: true})} 
+             disabled={disabled}
+             className="block w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" 
+           />
+           </div>
 
-            <div  className='flex flex-col items-start gap-4'>
-            <label   className="text-[14px]  tracking-[2px] font-sans text-black" >Email</label>
-            <input 
-              defaultValue={currentUser[0]?.email} 
-              {...register("email")} 
-              readOnly
-              className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-            />
-            </div>
+           <div  className='flex flex-col items-start gap-4'>
+           <label   className="text-[14px]  tracking-[2px] font-sans text-black" >Email</label>
+           <input 
+             defaultValue={currentUser[0]?.email} 
+             {...register("email")} 
+             readOnly
+             className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+           />
+           </div>
 
-            <div  className='flex flex-col items-start gap-4'>
-            <label   className="text-[14px] tracking-[2px] font-sans text-black" >Photo</label>
-            <input required {...register('image', {required: true})} disabled={disabled} type="file" className="file-input w-full max-w-xs font-sans" />
-            </div>
+           <div  className='flex flex-col items-start gap-4'>
+           <label   className="text-[14px] tracking-[2px] font-sans text-black" >Photo</label>
+           <input required {...register('image', {required: true})} disabled={disabled} type="file" className="file-input w-full max-w-xs font-sans" />
+           </div>
 
 
-          
-          <button 
-              type="submit" 
-              className='mt-6 btn bg-black text-white text-sm text-center hover:bg-[#797F54] duration-500' 
-              disabled={disabled}
-            >
-              Save
-            </button>
-          
-          </div>
-        </div>
+         
+         <button 
+             type="submit" 
+             className='mt-6 btn bg-black text-white text-sm text-center hover:bg-[#797F54] duration-500' 
+             disabled={disabled}
+           >
+             Save
+           </button>
+         
+         </div>
+
+       </div>
+        
+
       </form>
     </div>
   );

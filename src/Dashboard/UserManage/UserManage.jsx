@@ -64,9 +64,9 @@ const UserManage = () => {
 <div className=' my-auto mx-auto container'>
 
 
-<div className="flex flex-col gap-4 items-center my-20">
+<div className="flex flex-col gap-4 items-center my-20 m">
   <h2 className="text-[#797F54]  text-4xl">All Users</h2>
-  <p className="font-sans font-normal text-xl text-center">Manage users effortlessly with  intuitive admin panel. Add users new role  to keep the community thriving.</p>
+  <p className="font-sans font-normal md:text-xl lg:text-xl xl:text-xl text-center md:w-[500px] lg:w-[600px] xl:w-[700px]">Manage users effortlessly with  intuitive admin panel. Add users new role  to keep the community thriving.</p>
 </div>
 
 
@@ -75,7 +75,7 @@ const UserManage = () => {
   {
     Allusers?.map(users => 
      
-        <div key={users._id} className="overflow-x-auto shadow-custom rounded-2xl mb-10">
+        <div key={users._id} className="overflow-x-auto shadow-custom rounded-2xl mb-10  w-[300px] md:w-auto lg:w-auto xl:w-auto">
 <table className="table">
 {/* head */}
 <thead>

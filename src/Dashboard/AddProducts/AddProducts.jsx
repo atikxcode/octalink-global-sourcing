@@ -75,8 +75,8 @@ const onSubmit = async (data) => {
   return (
     <div className=' mx-auto container my-auto'>
 
-      <div className='flex justify-center my-20'>
-        <h2 className='text-[#797F54] text-4xl'>Add Products To The Website</h2>
+      <div className='flex justify-center my-10 md:my-16 lg:my-16 xl:my-20'>
+        <h2 className='text-[#797F54] text-4xl text-center'>Add Products To The Website</h2>
       </div>
     <form onSubmit={handleSubmit(onSubmit)}>
  

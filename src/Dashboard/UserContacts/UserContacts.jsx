@@ -105,7 +105,7 @@ const UserContacts = () => {
 
   return (
     <div className="container my-20 mx-auto p-4">
-      <div className="flex justify-center gap-10 mb-8">
+      <div className="flex  justify-center gap-10 mb-8">
         <button
           className={`p-2 ${activeTab === 'unread' ? 'border-b-2 border-black' : ''}`}
           onClick={() => setActiveTab('unread')}
@@ -131,7 +131,7 @@ const UserContacts = () => {
                 <div className="p-4 mb-4 border-[1px] border-gray-400  rounded-xl flex flex-col gap-3 h-auto">
                   <div className="font-sans font-semibold text-xl text-[#797F54]">{message.userName} <span className="text-black">({message.userEmail})</span></div>
                   <div className="text-xl italic font-semibold"><span className="text-[#797F54]">User Phone Number:</span> {message.userPhoneNumber}</div>
-                  <div className="text-[#797F54] text-xl font-bold w-[500px]">Message: <span className="font-semibold text-lg text-black ">{message.userMessage}</span></div>
+                  <div className="text-[#797F54] text-xl font-bold  md:w-[500px] lg:w-[500px] xl:w-[500px]">Message: <span className="font-semibold text-lg text-black ">{message.userMessage}</span></div>
                   <button onClick={() => updateStatus(message?._id, 'read')} className='p-3 md:p-4 lg:p-4 xl:p-4 text-[13px] tracking-wider md:text-[14px] lg::text-[14px] xl:text-[14px] font-bold   border-0 text-white bg-black hover:bg-[#797F54] rounded-[30px] duration-300'>Mark As Read</button>
                 </div>
               </div>
@@ -151,7 +151,7 @@ const UserContacts = () => {
                <div className="p-4 mb-4 border-[1px] border-gray-400  rounded-xl flex flex-col gap-3 h-auto">
                   <div className="font-sans font-semibold text-xl text-[#797F54]">{message.userName} <span className="text-black">({message.userEmail})</span></div>
                   <div className="text-xl italic font-semibold"><span className="text-[#797F54]">User Phone Number:</span> {message.userPhoneNumber}</div>
-                  <div className="text-[#797F54] text-xl font-bold w-[500px]">Message: <span className="font-semibold text-lg text-black ">{message.userMessage}</span></div>
+                  <div className="text-[#797F54] text-xl font-bold md:w-[500px] lg:-w[500px] xl:w-[500px]">Message: <span className="font-semibold text-lg text-black ">{message.userMessage}</span></div>
                   <button onClick={() => handleDelete(message?._id)} className='p-3 md:p-4 lg:p-4 xl:p-4 text-[13px] tracking-wider md:text-[14px] lg::text-[14px] xl:text-[14px] font-bold   border-0 text-white bg-black hover:bg-[#797F54] rounded-[30px] duration-300'>Delete Message</button>
                   
                   
