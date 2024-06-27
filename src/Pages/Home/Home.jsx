@@ -62,6 +62,7 @@ import './Home.css';
 import './Home.css'
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Link } from "react-router-dom";
 
 
 
@@ -107,8 +108,8 @@ const Home = () => {
     <p className="text-[72px] font-normal text-center">Where Sophistication and Style Meet</p>
     <p className="text-center w-[500px] text-gray-500">Discover timeless fashion crafted for the discerning and stylish. Our curated collections blend classic elegance with contemporary trends, redefining your wardrobe with every piece.</p>
     <div className="flex gap-4 items-center mb-10">
-      <button className="text-white text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-black hover:bg-[#797F54] duration-300">GET STARTED</button>
-      <button className="text-black text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-inherit border-[1px] border-black hover:bg-[#797F54] hover:border-[#797F54] hover:text-white duration-300">CONTACT US</button>
+      <Link to='/login'><button className="text-white text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-black hover:bg-[#797F54] duration-300">GET STARTED</button></Link>
+      <Link to='/contact'><button className="text-black text-[14px] font-sans font-semibold h-[40px] w-[150px] bg-inherit border-[1px] border-black hover:bg-[#797F54] hover:border-[#797F54] hover:text-white duration-300">CONTACT US</button></Link>
     </div>
     <div className="flex items-center gap-3 mb-36">
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaFacebookF /></p>
@@ -204,7 +205,7 @@ const Home = () => {
 
       </div>
 
-      <button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
+      <Link to='/contact'><button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
     </div>
 
 
@@ -243,7 +244,7 @@ const Home = () => {
           <h2 className="text-3xl font-normal tracking-[5px] mb-5">Have a project? Let's Talk!</h2>
           <div className=" flex items-center justify-between">
           <img className="w-[150px] translate-x-[-50px] translate-y-[40px]" src={logo} alt="" />
-          <button className="text-[14px] font-sans font-medium mt-10 bg-white translate-y-[40px] text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
+          <Link to='/contact'><button className="text-[14px] font-sans font-medium mt-10 bg-white translate-y-[40px] text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
 
           </div>
           
@@ -305,7 +306,7 @@ const Home = () => {
           <div className="flex flex-col items-center gap-6 pb-6">
           <h2 className="font-normal text-2xl">Mass Production</h2>
           <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Efficiently scale production while maintaining the highest standards of quality and craftsmanship.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
+          <Link to='/about'><button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button></Link>
           </div>
         </div>
 
@@ -316,7 +317,7 @@ const Home = () => {
           <div className="flex flex-col items-center gap-6 pb-6">
           <h2 className="font-normal text-2xl">Printing Design</h2>
           <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Transform your ideas into reality with our versatile printing design services, tailored to meet your exact specifications.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
+          <Link to='/about'><button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button></Link>
           </div>
         </div>
 
@@ -327,7 +328,7 @@ const Home = () => {
           <div className="flex flex-col items-center gap-6 pb-6">
           <h2 className="font-normal text-2xl">Product Sampling</h2>
           <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Explore our product sampling service to experience the quality and craftsmanship of our textiles firsthand before committing to larger orders.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
+          <Link to='/about'><button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button></Link>
           </div>
         </div>
 
@@ -338,7 +339,7 @@ const Home = () => {
           <div className="flex flex-col items-center gap-6 pb-6">
           <h2 className="font-normal text-2xl">Fabric Catalog</h2>
           <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Browse our comprehensive fabric catalog showcasing a wide range of textures, patterns, and materials to inspire your next project.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
+          <Link to='/about'><button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button></Link>
           </div>
         </div>
 
@@ -349,7 +350,7 @@ const Home = () => {
           <div className="flex flex-col items-center gap-6 pb-6">
           <h2 className="font-normal text-2xl">Pattern Making</h2>
           <p className="text-center font-sans font-normal text-gray-600 w-[280px]">Utilize our expert pattern making services to translate your creative concepts into precise and professional patterns for textile production.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
+          <Link to='/about'><button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button></Link>
           </div>
         </div>
 
@@ -360,7 +361,7 @@ const Home = () => {
           <div className="flex flex-col items-center gap-6 pb-6">
           <h2 className="font-normal text-2xl">Product Service</h2>
           <p className="text-center font-sans font-normal text-gray-600 w-[280px]">From customization to consultation, we provide tailored solutions to meet all your textile needs with expertise and dedication.</p>
-          <button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button>
+          <Link to='/about'><button className="font-sans text-[12px] font-normal tracking-[4px] underline underline-offset-4 text-gray-400 hover:text-[#797F54] duration-500">LEARN MORE</button></Link>
           </div>
         </div>
 

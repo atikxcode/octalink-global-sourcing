@@ -200,17 +200,17 @@ const Contact = () => {
           How long has your company has been established?
         </div>
         <div className="collapse-content"> 
-          <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+          <p className="font-sans font-normal">Octalink Global Sourcing has been established since 2012, bringing over a decade of experience in the textile and garment sourcing industry.</p>
         </div>
       </div>
 
         <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3 "  /> 
         <div className="collapse-title text-[22px] font-medium">
-          How many people work at Octalink Global Sourcing
+          How many people work at Octalink Global Sourcing?
         </div>
         <div className="collapse-content"> 
-        <p className="font-sans font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptas blanditiis dolor reiciendis </p>
+        <p className="font-sans font-normal">Octalink Global Sourcing employs approximately 200 skilled professionals who are dedicated to ensuring quality and efficiency in every aspect of our operations.</p>
 
         </div>
       </div>
@@ -218,10 +218,10 @@ const Contact = () => {
         <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3 " /> 
         <div className="collapse-title text-[22px] font-medium">
-          Click to open this one and close others
+        How does Octalink Global Sourcing ensure product quality?
         </div>
         <div className="collapse-content"> 
-          <p>hello</p>
+        <p className="font-sans font-normal">We maintain rigorous quality control measures at every stage of production, from sourcing raw materials to final inspection. Our team conducts thorough inspections and tests to guarantee that all products meet our high standards and client specifications.</p>
         </div>
       </div>
 
@@ -229,20 +229,20 @@ const Contact = () => {
       <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3" /> 
         <div className="collapse-title text-[22px] font-medium">
-          Click to open this one and close others
+        Can Octalink Global Sourcing handle custom orders and designs?
         </div>
         <div className="collapse-content"> 
-          <p>hello</p>
+        <p className="font-sans font-normal">Yes, Octalink Global Sourcing specializes in handling custom orders and designs. We work closely with clients to understand their specific requirements and preferences, ensuring that we deliver tailor-made solutions that meet their exact needs.</p>
         </div>
       </div>
 
       <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3" /> 
         <div className="collapse-title text-[22px] font-medium">
-          Click to open this one and close others
+        How does Octalink Global Sourcing ensure timely delivery of orders?
         </div>
         <div className="collapse-content"> 
-          <p>hello</p>
+        <p className="font-sans font-normal">We prioritize efficient logistics and production planning to ensure timely delivery of orders. Our robust supply chain management and proactive communication with suppliers and clients help us anticipate and resolve any potential delays, ensuring on-time delivery of every order.</p>
         </div>
       </div>
         </div>

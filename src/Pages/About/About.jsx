@@ -22,6 +22,7 @@ import './About.css'
 import icon1 from '../../assets/icon1.png'
 import icon2 from '../../assets/icon2.png'
 import icon3 from '../../assets/icon3.png'
+import { Link } from 'react-router-dom';
 
 
 const About = () => {
@@ -78,8 +79,8 @@ const About = () => {
       <div className='flex flex-col w-[40%]   flex-start text-start gap-8'>
         <h2 className='font-sans tracking-[2px] font-semibold text-[14px] text-[#797F54]'>ABOUT OUR JOURNEY</h2>
         <p className='text-5xl text-start font-normal  text-black'>We Provide The Best Textile Industry Since 1998</p>
-        <p className='text-[14px]  font-sans text-start font-semibold  text-gray-600'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, voluptate aliquam accusamus praesentium voluptatem molestiae molestias nulla consectetur neque vero, ad autem minus nihil! Repellat quas quo pariatur et officiis iure qui, sequi, eius necessitatibus labore architecto esse optio doloremque quae? Autem non, rerum rem accusamus distinctio aliquid, ea sunt molestiae eius ut vero laborum ipsum saepe! Et officia voluptas repellat possimus facere consequuntur, dolore, consectetur culpa molestiae eos dolor nobis eveniet ipsum, alias provident! Nesciunt perspiciatis culpa aut deleniti architecto accusantium maiores voluptate odit, ut veritatis vitae quia quaerat assumenda similique ipsum cupiditate quos repudiandae inventore. Eligendi, natus et!</p>
-        <button className="text-[14px] w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">LEARN MORE</button>
+        <p className='text-[14px]  font-sans text-start font-semibold  text-gray-600'>At OCTALINK GLOBAL SOURCING, we take immense pride in being at the forefront of the textile industry. Our commitment to excellence, innovation, and sustainability has positioned us as a leader in providing the highest quality fabrics and services. Our journey began with a simple yet powerful vision: to revolutionize the textile industry with unparalleled products and customer-centric services. Over the years, we have built a reputation for delivering exceptional quality, leveraging cutting-edge technology, and embracing sustainable practices.</p>
+        <Link to='/contact'><button className="text-[14px] w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">CONTACT US</button></Link>
       </div>
 
       </div>
@@ -114,37 +115,37 @@ const About = () => {
           <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaPen /></p>
             <h2 className='text-3xl font-normal'>Passion</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis leo.</p>
+            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Passion fuels innovation and excellence, driving us to deliver exceptional products and services.</p>
           </div>
 
           <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaUsers /></p>
             <h2 className='text-3xl font-normal'>Community</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis leo.</p>
+            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>We believe in fostering a strong community through our commitment to sustainable practices and supporting local initiatives.</p>
           </div>
           
           <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaCog /></p>
             <h2 className='text-3xl font-normal'>Commitment</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis leo.</p>
+            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Our commitment lies in delivering excellence, innovation, and sustainable practices, ensuring unparalleled quality and service.</p>
           </div>
 
           <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaChartBar /></p>
             <h2 className='text-3xl font-normal'>Growth</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis leo.</p>
+            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Growth is our continuous journey, fueled by innovation, customer trust, and expanding global partnerships.</p>
           </div>
 
           <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaLock /></p>
             <h2 className='text-3xl font-normal'>Honesty</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis leo.</p>
+            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Honesty forms the cornerstone of our values, guiding transparent relationships and integrity in all our endeavors.</p>
           </div>
 
           <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaUser /></p>
             <h2 className='text-3xl font-normal'>Team Work</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis leo.</p>
+            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Teamwork is the essence of our success, fostering collaboration and synergy to achieve shared goals and drive innovation.</p>
           </div>
 
           
@@ -260,24 +261,24 @@ const About = () => {
   <div className="flex flex-col items-center  border-r-[1px] border-gray-600 p-4">
     <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />
     <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Receive Our Catalog</h2>
-    <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+    <p className="w-[300px] text-center leading-7 font-sans font-normal">Explore our exquisite fabric collections by requesting your free catalog today! Discover innovative designs and high-quality textiles at your fingertips.</p>       
     </div>
 
   <div className="flex flex-col items-center  border-r-[1px] border-gray-600 p-4">
     <img className="h-[60px] w-[60px] mb-5" src={icon2} alt="" />
     <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Book Appointment</h2>
-    <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+    <p className="w-[300px] text-center leading-7 font-sans font-normal">Schedule a consultation with our textile experts to find the perfect fabrics for your needs.</p>       
     </div>
 
   <div className="flex flex-col items-center   p-4">
     <img className="h-[60px] w-[60px] mb-5" src={icon3} alt="" />
     <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Create Your Product</h2>
-    <p className="w-[300px] text-center leading-7 font-sans font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>       
+    <p className="w-[300px] text-center leading-7 font-sans font-normal">Design and customize your unique textile products with our expert guidance and premium materials.</p>       
     </div>
 
 </div>
 
-<button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
+<Link to='/contact'><button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
 </div>
 
 
@@ -290,7 +291,7 @@ const About = () => {
     <div className='flex flex-col items-center'>
     <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white]">GET STARTED</h2>
     <p className="text-[68px] text-center w-[700px] text-white font-normal">A Classic Ensemble From Head To Toe</p>
-    <button className="text-[14px] font-sans font-medium mt-10 bg-black text-white px-8 py-3 hover:text-black hover:bg-white duration-500">LEARN MORE</button>
+    <Link to='/'><button className="text-[14px] font-sans font-medium mt-10 bg-black text-white px-8 py-3 hover:text-black hover:bg-white duration-500">LEARN MORE</button></Link>
 
     </div>
     </div>

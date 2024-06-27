@@ -1,8 +1,60 @@
 import { FaArrowRight, FaDribbble, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import image from '../../assets/logo_Asset-1-1.png'
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const Footer = () => {
+
+  const axiosPublic = useAxiosPublic();
+
+  
+  const {isPending, isError, error, refetch, data: pressfile } = useQuery({
+    queryKey: ['pressfile'],
+    queryFn: async () => {
+      const res = await axiosPublic.get('/pressfile');
+      return res.data;
+    }
+  });
+  const { data: faqs } = useQuery({
+    queryKey: ['faqs'],
+    queryFn: async () => {
+      const res = await axiosPublic.get('/faq');
+      return res.data;
+    }
+  });
+
+  const { register, handleSubmit, reset,  formState: { errors }} = useForm();
+
+
+  
+
+  if (isPending) {
+    return <div className="mx-auto container flex justify-center"><span className="loading loading-dots loading-lg"></span></div>;
+  }
+
+
+  
+
+  if (isError) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  const onSubmit = async (data) => {
+    // console.log(data);
+    Swal.fire({
+      toast:true,
+      position: "top-end",
+      icon: "success",
+      title: "Thanks for Joining. We will keep posted to you our exciting news.",
+      showConfirmButton: false,
+      timer: 2500
+    });
+   
+  };
+
   return (
     <footer className="bg-[#0f0f0f] text-white pt-[200px]  ">
      
@@ -25,9 +77,19 @@ const Footer = () => {
          
 
          <div className='flex items-center'>
-         <input className="bg-inherit placeholder:text-white placeholder:font-normal placeholder:tracking-[2px] border-b-[1px] w-[300px] border-gray-600 focus:border-white hover:border-white  px-4 py-2 outline-none duration-500" placeholder="Your email" type="email" />
+         
+         <form onSubmit={handleSubmit(onSubmit)}>
+         <input
+              type='email'
+              placeholder="Your email"
+              {...register("name", {required: true})} 
+              className="bg-inherit placeholder:text-white placeholder:font-normal placeholder:tracking-[2px] border-b-[1px] w-[300px] border-gray-600 focus:border-white hover:border-white  px-4 py-2 outline-none duration-500" 
+            />
+            
+            <button type='submit'><p><FaArrowRight></FaArrowRight></p></button>
+            </form>
 
-         <p><FaArrowRight></FaArrowRight></p>
+         
          </div>
 
         
@@ -80,13 +142,155 @@ const Footer = () => {
           
           <div>
             <h2 className='text-3xl font-normal mb-4'>Resources</h2>
-            <a href=""><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Documentation</p></a>
-            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Privacy Policy</p></a>
-            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Press Files</p></a>
-            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>FAQs</p></a>
-            <a href="">            <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Contact</p></a>
+            <Link><a onClick={()=>document.getElementById('my_modal_1').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Documentation</p></a></Link>
+            <Link><a onClick={()=>document.getElementById('my_modal_2').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Privacy Policy</p></a></Link>
+            <Link><a onClick={()=>document.getElementById('my_modal_3').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Press Files</p></a></Link>
+            <Link><a onClick={()=>document.getElementById('my_modal_4').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>FAQs</p></a></Link>
+            <Link><a onClick={()=>document.getElementById('my_modal_5').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Contact</p></a></Link>
            
           </div>
+
+          {/* Modal 1*/}
+          <dialog id="my_modal_1" className="modal modal-bottom sm:modal-middle text-black">
+        <div className="modal-box flex flex-col items-center font-sans">
+
+          <h2 className="font-bold text-lg">Company Name: OCTALINK GLOBAL SOURCING</h2>
+          <p className="py-4">Overview: Welcome to OCTALINK GLOBAL SOURCING, your premier destination for high-quality textiles. We specialize in offering a diverse range of fabrics, including eco-friendly options, to cater to various textile needs. Our commitment lies in providing top-notch products coupled with excellent customer service.</p>
+          <p className='py-4'>Mission Statement: At OCTALINK GLOBAL SOURCING, our mission is to deliver premium fabrics while upholding sustainable and ethical practices in the textile industry. We aim to exceed customer expectations through innovation, quality, and reliability.</p>
+          <p className='py-4'>Services: <br /> Fabric Sales: We offer a wide selection of fabrics ranging from cotton and silk to polyester blends, catering to both individual and bulk orders.
+          Custom Fabric Orders: Tailored solutions for unique fabric needs, ensuring our customers get exactly what they require for their projects.
+          Fabric Printing Services: Personalize your fabric designs with our custom printing services, perfect for creating bespoke textiles.
+          Commitment to Sustainability: We are dedicated to reducing our environmental impact by offering eco-friendly fabrics and promoting sustainable production methods throughout our supply chain.</p>
+                    <p className='py-4'>Contact Us: For inquiries, orders, or more information about our products and services, please visit our website or contact our customer service team at octalink@gmail.com.</p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+
+          {/* Modal 2*/}
+          <dialog id="my_modal_2" className="modal modal-bottom sm:modal-middle text-black">
+        <div className="modal-box flex flex-col items-center font-sans">
+
+          <h2 className="font-bold text-lg">Privacy Policy</h2>
+          <h2 className="font-bold text-lg">Effective Date: 16th May 2014</h2>
+          <p className="py-4">Introduction: <br /> OCTALINK GLOBAL SOURCING is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services.</p>
+          <p className="py-4">Information We Collect <br /> <br />
+
+We may collect personal information from you when you interact with our website, place orders, or communicate with us. This may include: <br /> <br />
+
+Contact information such as name, email address, phone number, and shipping address. <br /> <br />
+Payment information for purchases made on our site. <br /> <br />
+Information you provide when contacting customer service or participating in surveys or promotions. <br /> <br />
+Use of Your Information <br /> <br />
+
+We use the information we collect to: <br /> <br />
+
+Process and fulfill your orders.<br /> <br />
+Communicate with you, including providing customer service and responding to inquiries.<br /> <br />
+Improve our products, services, and website functionality.<br />
+Personalize your experience and offer tailored content, promotions, and recommendations.<br /> <br />
+Sharing of Your Information<br /> <br />
+
+We may share your information with third-party service providers who assist us in operating our website, conducting our business, or servicing you. These parties are contractually obligated to keep your information confidential and secure.<br /> <br />
+
+Security of Your Information <br /> <br />
+
+We implement a variety of security measures to maintain the safety of your personal information when you place an order or enter, submit, or access your personal information.<br /> <br />
+
+Your Choices<br /> <br />
+
+You have the right to:<br /> <br />
+
+Access, update, or delete your personal information.<br /> <br />
+Opt-out of receiving promotional communications.<br /> <br />
+Request information about the data we have collected about you and how it has been used.<br /> <br />
+Changes to This Privacy Policy <br /> <br />
+
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+
+Contact Us <br /> <br />
+
+If you have any questions about this Privacy Policy, please contact us at octalink@gmail.com.</p>
+
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+
+          {/* Modal 3*/}
+          <dialog id="my_modal_3" className="modal modal-bottom sm:modal-middle text-black">
+          <div className="modal-box flex flex-col items-center font-sans">
+               
+                {
+                  pressfile?.map(file => <div key={file?._id}>
+                 
+                    <h2 className="font-bold text-lg">Title: {file?.title}</h2>
+                    <p className="py-4">Launch Date: {file?.date}</p>
+                    <p className='py-4'>Content: {file?.content}</p>
+                    </div>)
+                }
+
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn">Close</button>
+                </form>
+              </div>
+                      </div>
+         
+      </dialog>
+
+
+          {/* Modal 4*/}
+          <dialog id="my_modal_4" className="modal modal-bottom sm:modal-middle text-black">
+          <div className="modal-box flex flex-col items-center font-sans">
+               
+          <h2 className="font-bold text-lg text-center">All Questions And Ans Regarding Octalink Global Sourcing.</h2>
+                {
+                  faqs?.map(faq => <div className='mb-6' key={faq?._id}>
+                 
+                    
+                    <p className="py-4">Question: {faq?.question}</p>
+                    <p className='py-4'>Answer: {faq?.answer}</p>
+                    </div>)
+                }
+
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn">Close</button>
+                </form>
+              </div>
+                      </div>
+         
+      </dialog>
+
+      {/* Modal 5 */}
+
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle text-black">
+  <div className="modal-box flex flex-col items-center text-xl">
+    <h3 className="font-bold text-lg">Contacts Info</h3>
+    <p className="py-4">Email: octalink@gmail.com</p>
+    <p className="py-4">Phone Number: +880 1718-854866 /  +880 1971-112550</p>
+    <p className="py-4">Address: House: 16, Road: 11, Sector 01 Uttara, Dhaka 1230</p>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
         </div>
 

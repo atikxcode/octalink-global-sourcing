@@ -190,9 +190,9 @@ const Products = () => {
 <div className="grid grid-cols-4 my-20 gap-10">
 {
   (selectedCategory?.length > 0 ? (selectedSubCategory?.length > 0 ? selectedSubCategory : selectedCategory) : products)?.map(product => <div key={product._id}>
-    <div className=" flex flex-col items-center bg-white px-6 py-4 rounded-tl-[50px] rounded-br-[50px] hover:scale-110 duration-500">
+    <div className=" flex flex-col items-center bg-white px-6 py-4 rounded-tl-[50px] rounded-br-[50px]  hover:translate-y-[-20px] duration-500">
       <p className="uppercase tracking-[2px] mb-2 text-xl font-semibold font-sans">{product?.category}</p>
-      <img className="h-[340px] full bg-gray-100 p-4 rounded-tl-[50px] rounded-br-[50px]" src={product?.image} alt="" />
+      <img className="h-[340px] full bg-gray-100 p-4 rounded-tl-[50px] rounded-br-[50px] " src={product?.image} alt="" />
       <h2 className="text-[#797F54] uppercase tracking-[2px] font-[17px] mt-4">{product?.subcategory?.replace(/-/g, ' ')}</h2>
     </div>
   </div>)
