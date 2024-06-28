@@ -79,7 +79,7 @@ export const router = createBrowserRouter([
       {
         path: 'editproduct/:id',
         element: <PrivateRoutes><AdminRoute><EditProduct></EditProduct></AdminRoute></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params}) => fetch(`https://octalink-global-sourcing-server.vercel.app/products/${params.id}`)
       },
       {
         path: 'usercontacts',
