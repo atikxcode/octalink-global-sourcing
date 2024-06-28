@@ -7,6 +7,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../Hooks/useAxiosPublic';
 import { useSwipeable } from 'react-swipeable';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -48,7 +49,11 @@ const Dashboard = () => {
   return (
     <div className='flex gap-10 font-forum'>
   
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>Dashboard - OCTALINK</title>
 
+      </Helmet>
 
 
 

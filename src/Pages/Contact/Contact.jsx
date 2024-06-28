@@ -8,6 +8,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet';
 
 
 
@@ -59,6 +60,12 @@ const Contact = () => {
 
   return (
     <div className='mt-24 '>
+
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Contact - OCTALINK</title>
+
+      </Helmet>
 
       <div className='flex flex-col  gap-8 items-center mx-auto container'>
       <h2 className='text-3xl md:text-4xl lg:text-5xl xl:text-5xl mb-10 font-normal'>Our Contact</h2>

@@ -63,6 +63,7 @@ import './Home.css'
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 
@@ -101,6 +102,12 @@ const Home = () => {
 
   return (
  <div className="min-h-screen  ">
+
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>Home - OCTALINK</title>
+
+      </Helmet>
  <div className="divider "></div> 
 
  <div className="pt-20 flex flex-col items-center gap-4 ">

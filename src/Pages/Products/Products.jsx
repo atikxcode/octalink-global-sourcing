@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 
 const Products = () => {
@@ -66,6 +67,11 @@ const Products = () => {
 
   return (
 <div className="my-20 mx-auto container min-h-screen">
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Product - OCTALINK</title>
+
+      </Helmet>
   <div className="flex flex-col  mb-20 items-center">
     <h2 className='font-sans tracking-[2px] font-semibold text-[16px] text-[#797F54] mb-8'>Luxury Fabrics, Timeless Elegance</h2>
     <p className="text-3xl md:text-5xl lg:text-6xl xl:text-6xl font-normal text-center">Discover the Art of Quality and Craftsmanship in Every Thread</p>

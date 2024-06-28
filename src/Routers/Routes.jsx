@@ -14,6 +14,8 @@ import AddProducts from "../Dashboard/AddProducts/AddProducts";
 import EditProducts from "../Dashboard/EditProducts/EditProducts";
 import EditProduct from "../Dashboard/EditProducts/EditProduct";
 import UserContacts from "../Dashboard/UserContacts/UserContacts";
+import PrivateRoutes from "../Pages/PrivateRoutes/PrivateRoutes";
+import AdminRoute from "../Pages/PrivateRoutes/AdminRoute";
 
 
 
@@ -55,33 +57,33 @@ export const router = createBrowserRouter([
 
 {
     path: 'dashboard',
-    element: <Dashboard></Dashboard>,
+    element:  <PrivateRoutes><AdminRoute><Dashboard></Dashboard></AdminRoute></PrivateRoutes>,
     children: [
       {
         path: 'profile',
-        element: <Profile></Profile>
+        element: <PrivateRoutes><AdminRoute><Profile></Profile></AdminRoute></PrivateRoutes>
       },
 
       {
         path: 'usersmanagement',
-        element: <UserManage></UserManage>
+        element: <PrivateRoutes><AdminRoute><UserManage></UserManage></AdminRoute></PrivateRoutes>
       },
       {
         path: 'addproducts',
-        element: <AddProducts></AddProducts>
+        element: <PrivateRoutes><AdminRoute><AddProducts></AddProducts></AdminRoute></PrivateRoutes>
       },
       {
         path: 'editproducts',
-        element: <EditProducts></EditProducts>
+        element: <PrivateRoutes><AdminRoute><EditProducts></EditProducts></AdminRoute></PrivateRoutes>
       },
       {
         path: 'editproduct/:id',
-        element: <EditProduct></EditProduct>,
+        element: <PrivateRoutes><AdminRoute><EditProduct></EditProduct></AdminRoute></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
       },
       {
         path: 'usercontacts',
-        element: <UserContacts></UserContacts>
+        element: <PrivateRoutes><AdminRoute><UserContacts></UserContacts></AdminRoute></PrivateRoutes>
       },
    
     ]

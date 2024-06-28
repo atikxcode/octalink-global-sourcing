@@ -23,6 +23,7 @@ import icon1 from '../../assets/icon1.png'
 import icon2 from '../../assets/icon2.png'
 import icon3 from '../../assets/icon3.png'
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 const About = () => {
@@ -35,6 +36,12 @@ const About = () => {
 
   return (
     <div>
+
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>About - OCTALINK</title>
+
+      </Helmet>
 
       <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between mt-16 md:mt-24 lg:mt-24 xl:mt-24 mb-20 md:mb-36 lg:mb-36 xl:mb-36 gap-8 md:gap-0 lg:gap-0  xl:gap-0">
 
