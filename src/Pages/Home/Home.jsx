@@ -185,7 +185,7 @@ const Home = () => {
       <h2 className="font-sans font-semibold tracking-[6px] mb-8 text-gray-100">HOW IT WORKS</h2>
       <p className="font-forum text-center text-3xl font-semibold tracking-[6px] mb-8 text-gray-100">Refined Style for Discerning Tastes</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3  ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3  gap-4 md:gap-0 lg:gap-0 xl:gap-0">
 
         <div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[1px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
           <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />

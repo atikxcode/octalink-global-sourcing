@@ -60,23 +60,25 @@ const Footer = () => {
      
       <div className='mx-auto container'>
 
-      <div className='flex justify-between'>
+      <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between'>
 
         {/* first part */}
 
-        <div className='flex flex-col gap-8 w-1/2'>
+        <div className='flex flex-col gap-8 w-full md:w-1/2 lg:w-1/2 xl:w-1/2'>
 
 
-        <div className='flex items-center gap-4'>
-        <img className='w-[70px]' src={image} alt="" />
-        <h2 className='text-4xl font-normal'>Octalink Global Sourcing</h2>
+        <div className='flex flex-row md:flex-row lg:flex-row xl:flex-row items-center md:items-center lg:items-center xl:items-center gap-4 justify-center md:justify-start lg:justify-start xl:justify-start '>
+        <img className='w-[60px] md:w-[70px] lg:w-[70px] xl:w-[70px]' src={image} alt="" />
+        <h2 className='text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-normal'>Octalink Global Sourcing</h2>
         </div>
 
-        <p className='text-gray-400 font-sans w-[350px] text-lg font-semibold mb-2 hover:text-white duration-500'>Join to our newsletter for the latest trends and updates in fashion and textiles!</p>
+        <div className=' justify-center md:justify-start lg:justify-start xl:justify-start'>
+        <p className='text-gray-400 text-center md:text-start lg:text-start xl:text-start  font-sans w-full  md:w-[350px] lg:w-[350px] xl:w-[350px] text-lg font-semibold mb-2 hover:text-white duration-500'>Join to our newsletter for the latest trends and updates in fashion and textiles!</p>
+        </div>
          
          
 
-         <div className='flex items-center'>
+         <div className='flex items-center justify-center md:justify-start lg:justify-start xl:justify-start'>
          
          <form onSubmit={handleSubmit(onSubmit)}>
          <input
@@ -95,7 +97,7 @@ const Footer = () => {
         
 
 
-         <div className="flex items-center gap-3 mb-36">
+         <div className="flex items-center gap-3 mb-36 justify-center md:justify-start lg:justify-start xl:justify-start">
       <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaFacebookF /></p>
       <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaTwitter /></p>
       <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaInstagram /></p>
@@ -108,18 +110,18 @@ const Footer = () => {
 
         {/* second part */}
 
-        <div className='flex justify-between  w-1/2 '>
+        <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between w-full md:w-1/2 lg:w-1/2 xl:w-1/2  items-start p-4 md:p-0 lg:p-0 xl:p-0 '>
 
         {/* 1 */}
-          <div className='flex-col items-start'>
+          <div className='flex-col items-center md:items-start lg:items-start xl:items-start   '>
 
             <div className='mb-8'>
-              <h2 className='text-3xl font-normal mb-4'>Address</h2>
+              <h2 className='text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-normal mb-4'>Address</h2>
               <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>16 Road No.11 Uttara, <br />Dhaka 1230</p>
             </div>
 
             <div>
-              <h2 className='text-3xl font-normal mb-4'>Contact</h2>
+              <h2 className='text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-normal mb-4'>Contact</h2>
               <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>+880 1718-854866</p>
               <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>octalink@gmail.com</p>
             </div>
@@ -128,8 +130,8 @@ const Footer = () => {
 
           {/* 2 */}
           
-          <div className='flex flex-col items-start'>
-            <h2 className='text-3xl font-normal mb-4'>Explore</h2>
+          <div className='flex flex-col items-start mt-4 md:mt-0 lg:mt-0 xl:mt-0'>
+            <h2 className='text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-normal mb-4'>Explore</h2>
             <Link to='/'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Home</p></Link>
             <Link to='/about'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>About</p></Link>
             <Link to='/products'><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Products</p></Link>
@@ -140,8 +142,8 @@ const Footer = () => {
 
           {/* 3 */}
           
-          <div>
-            <h2 className='text-3xl font-normal mb-4'>Resources</h2>
+          <div className='mt-4 md:mt-0 lg:mt-0 xl:mt-0'>
+            <h2 className='text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-normal mb-4'>Resources</h2>
             <Link><a onClick={()=>document.getElementById('my_modal_1').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Documentation</p></a></Link>
             <Link><a onClick={()=>document.getElementById('my_modal_2').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Privacy Policy</p></a></Link>
             <Link><a onClick={()=>document.getElementById('my_modal_3').showModal()}><p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>Press Files</p></a></Link>
@@ -301,11 +303,13 @@ If you have any questions about this Privacy Policy, please contact us at octali
 
     <div className='bg-gray-600 h-[1px]'></div>
 
-    <div className='flex justify-between py-4 mx-auto container'>
+    <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between py-4 mx-auto container gap-4'>
 
-      <h2 className='font-sans font-normal'>Copyright © 2024 - All right reserved by Octalink Global Sourcing</h2>
+      <div className='order-2 md:order-1 lg:order-1 xl:order-1'>
+      <h2 className='font-sans font-normal text-center'>Copyright © 2024 - All Right Reserved By Atiqul Islam</h2>
+      </div>
       
-      <div className='flex gap-4'>
+      <div className='order-1 md:order-2 lg:order-2 xl:order-2 flex gap-4 items-center justify-center '>
         <p className='font-sans font-normal'>Privacy Policy</p>
         <p className='font-sans font-normal'>Terms & Services</p>
       </div>
