@@ -58,9 +58,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#0f0f0f] text-white pt-[200px]  ">
      
-      <div className='mx-auto container'>
+      <div className='mx-auto container p-4'>
 
-      <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between'>
+      <div className='flex flex-col md:flex-col lg:flex-row xl:flex-row justify-between'>
 
         {/* first part */}
 
@@ -110,7 +110,7 @@ const Footer = () => {
 
         {/* second part */}
 
-        <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between w-full md:w-1/2 lg:w-1/2 xl:w-1/2  items-start p-4 md:p-0 lg:p-0 xl:p-0 '>
+        <div className='flex flex-col md:flex-col lg:flex-row xl:flex-row justify-between w-full md:w-1/2 lg:w-1/2 xl:w-1/2  items-start p-4 md:p-0 lg:p-0 xl:p-0 '>
 
         {/* 1 */}
           <div className='flex-col items-center md:items-start lg:items-start xl:items-start   '>

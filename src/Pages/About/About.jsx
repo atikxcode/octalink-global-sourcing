@@ -58,7 +58,7 @@ const About = () => {
       </div>
 
 
-      <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row border-black items-center mx-auto container mb-[200px] justify-between gap-8 md:gap-0 lg:gap-0 xl:gap-0' data-aos="fade-up"
+      <div className='flex flex-col md:flex-col lg:flex-col xl:flex-row border-black items-center mx-auto container mb-[200px] justify-between gap-8 md:gap-24 lg:gap-24 xl:gap-0' data-aos="fade-up"
      data-aos-duration="1500">
         {/* img boxes */}
 
@@ -80,7 +80,7 @@ const About = () => {
         <h2 className='font-sans tracking-[2px] font-semibold text-[14px] text-[#797F54]'>ABOUT OUR JOURNEY</h2>
         <p className='text-5xl text-start font-normal  text-black'>We Provide The Best Textile Industry Since 1998</p>
         <p className='text-[14px]  font-sans text-start font-semibold  text-gray-600'>At OCTALINK GLOBAL SOURCING, we take immense pride in being at the forefront of the textile industry. Our commitment to excellence, innovation, and sustainability has positioned us as a leader in providing the highest quality fabrics and services. Our journey began with a simple yet powerful vision: to revolutionize the textile industry with unparalleled products and customer-centric services. Over the years, we have built a reputation for delivering exceptional quality, leveraging cutting-edge technology, and embracing sustainable practices.</p>
-        <Link to='/contact'><button className="text-[14px] w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">CONTACT US</button></Link>
+        <Link to='/contact'><button className="text-[14px] xl:w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">CONTACT US</button></Link>
       </div>
 
       </div>
@@ -256,15 +256,15 @@ const About = () => {
 <h2 className="font-sans font-semibold tracking-[6px] mb-8 text-gray-100">HOW IT WORKS</h2>
 <p className="font-forum text-center text-3xl font-semibold tracking-[6px] mb-8 text-gray-100">Refined Style for Discerning Tastes</p>
 
-<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-0 lg:gap-0 xl:gap-0">
+<div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-4 lg:gap-0 xl:gap-0">
 
-        <div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[1px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
+        <div className="flex flex-col items-center border-b-[1px] md:border-b-[1px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[0px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
           <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />
           <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Receive Our Catalog</h2>
           <p className="w-[300px] text-center leading-7 font-sans font-normal">Explore our exquisite fabric collections by requesting your free catalog today! Discover innovative designs and high-quality textiles at your fingertips.</p>       
           </div>
 
-        <div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px]  border-r-[0px] md:border-r-[1px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
+        <div className="flex flex-col items-center border-b-[1px] md:border-b-[1px] lg:border-b-[0px] xl:border-b-[0px]  border-r-[0px] md:border-r-[0px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
           <img className="h-[60px] w-[60px] mb-5" src={icon2} alt="" />
           <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Book Appointment</h2>
           <p className="w-[300px] text-center leading-7 font-sans font-normal">Schedule a consultation with our textile experts to find the perfect fabrics for your needs.</p>       
@@ -287,10 +287,10 @@ const About = () => {
 
 {/* another section */}
 
-<div className='bg-[#797F54] p-32'>
+<div className='bg-[#797F54] p-16 md:p-24 lg:p-30 xl:p-32'>
     <div className='flex flex-col items-center'>
     <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white]">GET STARTED</h2>
-    <p className="text-[68px] text-center w-[700px] text-white font-normal">A Classic Ensemble From Head To Toe</p>
+    <p className="text-[38px] md:text-[58px] lg:text-[68px] xl:text-[68px] text-center w-[350px] md:w-[700px] lg:w-[700px] xl:w-[700px] text-white font-normal">A Classic Ensemble From Head To Toe</p>
     <Link to='/'><button className="text-[14px] font-sans font-medium mt-10 bg-black text-white px-8 py-3 hover:text-black hover:bg-white duration-500">LEARN MORE</button></Link>
 
     </div>

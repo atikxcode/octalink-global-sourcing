@@ -123,7 +123,7 @@ const Home = () => {
 
 
 
-    <div className="sm:flex md:flex lg:flex xl:flex  gap-10 z-10" data-aos="fade-up"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10 z-10" data-aos="fade-up"
      data-aos-duration="1500">
       <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3 translate-y-[-60px]">
         <p>Timeless Classics</p>
@@ -134,7 +134,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3">
+      <div className=" px-6 py-4 bg-white flex flex-col items-center gap-3 mb-28 md:mb-0 lg:mb-4 xl:mb-0">
         <p>Luxury Fabrics</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img2} alt="" />
         <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
@@ -185,27 +185,27 @@ const Home = () => {
       <h2 className="font-sans font-semibold tracking-[6px] mb-8 text-gray-100">HOW IT WORKS</h2>
       <p className="font-forum text-center text-3xl font-semibold tracking-[6px] mb-8 text-gray-100">Refined Style for Discerning Tastes</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3  gap-4 md:gap-0 lg:gap-0 xl:gap-0">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-4 lg:gap-0 xl:gap-0">
 
-        <div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[1px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
-          <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />
-          <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Receive Our Catalog</h2>
-          <p className="w-[300px] text-center leading-7 font-sans font-normal">Explore our exquisite fabric collections by requesting your free catalog today! Discover innovative designs and high-quality textiles at your fingertips.</p>       
-          </div>
+<div className="flex flex-col items-center border-b-[1px] md:border-b-[1px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[0px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
+  <img className="h-[60px] w-[60px] mb-5" src={icon1} alt="" />
+  <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Receive Our Catalog</h2>
+  <p className="w-[300px] text-center leading-7 font-sans font-normal">Explore our exquisite fabric collections by requesting your free catalog today! Discover innovative designs and high-quality textiles at your fingertips.</p>       
+  </div>
 
-        <div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px]  border-r-[0px] md:border-r-[1px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
-          <img className="h-[60px] w-[60px] mb-5" src={icon2} alt="" />
-          <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Book Appointment</h2>
-          <p className="w-[300px] text-center leading-7 font-sans font-normal">Schedule a consultation with our textile experts to find the perfect fabrics for your needs.</p>       
-          </div>
+<div className="flex flex-col items-center border-b-[1px] md:border-b-[1px] lg:border-b-[0px] xl:border-b-[0px]  border-r-[0px] md:border-r-[0px] lg:border-r-[1px]  xl:border-r-[1px] border-gray-600 p-2 md:p-4 lg:p-8 xl:p-8">
+  <img className="h-[60px] w-[60px] mb-5" src={icon2} alt="" />
+  <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Book Appointment</h2>
+  <p className="w-[300px] text-center leading-7 font-sans font-normal">Schedule a consultation with our textile experts to find the perfect fabrics for your needs.</p>       
+  </div>
 
-        <div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[0px] lg:border-r-[0px]  xl:border-r-[0px] border-gray-600  p-2 md:p-4 lg:p-8 xl:p-8">
-          <img className="h-[60px] w-[60px] mb-5" src={icon3} alt="" />
-          <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Create Your Product</h2>
-          <p className="w-[300px] text-center leading-7 font-sans font-normal">Design and customize your unique textile products with our expert guidance and premium materials.</p>       
-          </div>
+<div className="flex flex-col items-center border-b-[1px] md:border-b-[0px] lg:border-b-[0px] xl:border-b-[0px] border-r-[0px] md:border-r-[0px] lg:border-r-[0px]  xl:border-r-[0px] border-gray-600  p-2 md:p-4 lg:p-8 xl:p-8">
+  <img className="h-[60px] w-[60px] mb-5" src={icon3} alt="" />
+  <h2 className="font-forum text-2xl font-semibold tracking-[6px] mb-8 text-gray-100 text-center">Create Your Product</h2>
+  <p className="w-[300px] text-center leading-7 font-sans font-normal">Design and customize your unique textile products with our expert guidance and premium materials.</p>       
+  </div>
 
-      </div>
+</div>
 
       <Link to='/contact'><button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
     </div>
@@ -214,21 +214,21 @@ const Home = () => {
     </div>
 
 
-    <div className=" flex flex-col md:flex-row lg:flex-row xl:flex-row  gap-10 mb-[300px]" data-aos="fade-up"
+    <div className=" flex flex-col md:flex-col lg:flex-row xl:flex-row  gap-10 mb-[300px]" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="flex flex-col items-start gap-8">
-        <h2 className="text-[#797F54] font-sans font-semibold w-full text-center md:text-start lg:text-start xl:text-start">ABOUT OCTALINK GLOBAL SOURCING </h2>
-        <h2 className="text-4xl font-normal text-center md:text-start lg:text-start xl:text-start w-full md:w-[350px] lg:w-[350px] xl:w-[350px] ">Exclusive Quality as Unique as You, Fusce accumsan ut sem.</h2>
-        <p className="w-full md:w-[500px] lg:w-[500px] xl:w-[500px] font-sans font-normal text-gray-500  text-center md:text-start lg:text-start xl:text-start">Experience the unparalleled quality and uniqueness of our textiles. Each piece is crafted with meticulous attention to detail, ensuring a perfect blend of elegance and durability. Fusce accumsan ut sem, enhancing your designs with exceptional beauty and sophistication.</p>
+        <h2 className="text-[#797F54] font-sans font-semibold w-full text-center md:text-center lg:text-start xl:text-start">ABOUT OCTALINK GLOBAL SOURCING </h2>
+        <h2 className="text-4xl font-normal text-center md:text-center lg:text-start xl:text-start w-full md:w-full lg:w-[350px] xl:w-[350px] ">Exclusive Quality as Unique as You, Fusce accumsan ut sem.</h2>
+        <p className="w-full md:w-full lg:w-[500px] xl:w-[500px] font-sans font-normal text-gray-500  text-center md:text-center lg:text-start xl:text-start">Experience the unparalleled quality and uniqueness of our textiles. Each piece is crafted with meticulous attention to detail, ensuring a perfect blend of elegance and durability. Fusce accumsan ut sem, enhancing your designs with exceptional beauty and sophistication.</p>
         <img className="w-[90%] md:w-[500px] lg:w-[500px] xl:w-[500px] mx-auto" src={image} alt="" />
       </div>
 
-      <div className="flex flex-col items-start gap-8 translate-y-[210px]">
-        <p className="w-full text-center md:text-start lg:text-start xl:text-start md:w-[90%] lg:w-[90%] xl:w-[500px] font-sans font-normal text-gray-500">Our commitment to excellence ensures that every fabric stands out with distinct charm and superior craftsmanship. From vibrant patterns to subtle textures, each textile is designed to reflect your individuality. </p>
+      <div className="flex flex-col items-start md:items-center lg:items-start xl:items-start gap-8 translate-y-[210px]">
+        <p className="w-full text-center md:text-center lg:text-start xl:text-start  lg:w-[90%] xl:w-[500px] font-sans font-normal text-gray-500">Our commitment to excellence ensures that every fabric stands out with distinct charm and superior craftsmanship. From vibrant patterns to subtle textures, each textile is designed to reflect your individuality. </p>
          
          <div className="flex flex-col items-start gap-2">
-         <h2 className="text-3xl font-normal mb-6 w-full text-center md:text-start lg:text-start xl:text-start">Our Vision</h2>
+         <h2 className="text-3xl font-normal mb-6 w-full text-center md:text-center lg:text-start xl:text-start">Our Vision</h2>
           <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Innovation and Excellence:</span> To lead the textile industry through cutting-edge designs and unparalleled quality.</span></p>
           <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Sustainability:</span> To commit to eco-friendly practices, ensuring our products are as kind to the planet as they are beautiful.</span></p>
           <p className="flex items-center gap-2 font-sans font-normal text-gray-600"><span className="text-[14px]"><FaCheck /></span><span><span className="font-bold">Customer-Centric Approach:</span> To prioritize our clients' needs, delivering customized solutions that exceed expectations.</span></p>
@@ -254,6 +254,11 @@ const Home = () => {
 
       </div>
     </div>
+
+
+
+
+
 
     <div className="mb-20" data-aos="fade-up"
      data-aos-duration="1500">
@@ -300,7 +305,7 @@ const Home = () => {
         <p className="text-[42px] md:text-[52px] lg:text-[62px] xl:text-[72px] font-normal mb-10 w-full text-center">Where Sophistication and Style Meet</p>
         
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10 p-4">
 
         <div className="w-[90%] md:w-full lg:w-full xl:w-full mx-auto  flex flex-col items-center bg-white">
           <img className="w-[400px]" src={massimg} alt="" />
@@ -388,10 +393,12 @@ const Home = () => {
         <p className="text-[42px] md:text-[52px] lg:text-[62px] xl:text-[72px] font-normal mb-10  leading-[50px]  w-full text-center md:text-start lg:text-start xl:text-start">High Style Exceptional Service</p>
       </div>
 
-      <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row flex-start  w-full items-center gap-8">
+      <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row flex-start  w-full items-center gap-8">
+        
+        
         {/* Left side work */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 w-full md:w-2/3 lg:w-2/3 xl:w-2/3">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 w-full md:w-2/3 lg:w-2/3 xl:w-2/3">
 
       <div className="flex flex-col gap-3 ">
         <h2 className="font-sans font-semibold text-[#797F54] tracking-[6px]">01.</h2>
@@ -429,6 +436,8 @@ const Home = () => {
       <div className="flex justify-end w-full md:w-1/3 lg:w-1/3 xl:w-1/3">
         <img className="w-[400px] h-[600px]" src={capture} alt="" />
       </div>
+
+      
     </div>
 
       </div>
@@ -481,7 +490,7 @@ const Home = () => {
 
 
 
-    <div className=" mt-10 w-full p-4 md:p-32 lg:p-32 xl:p-32 bg-[#f8f2e7]" data-aos="fade-up"
+    <div className=" mt-10 w-full p-4 md:p-16 lg:p-16 xl:p-32 bg-[#f8f2e7]" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="container mx-auto">
@@ -570,14 +579,25 @@ const Home = () => {
         </div>
 
         </div>
+
+
       </div>
 
       </div>
 
     </div>
    
+   
 
  </div>
+ <div className='bg-[#797F54] p-16 md:p-24 lg:p-30 xl:p-32'>
+    <div className='flex flex-col items-center'>
+    <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white]">GET STARTED</h2>
+    <p className="text-[38px] md:text-[58px] lg:text-[68px] xl:text-[68px] text-center w-[350px] md:w-[700px] lg:w-[700px] xl:w-[700px] text-white font-normal">A Classic Ensemble From Head To Toe</p>
+    <Link to='/'><button className="text-[14px] font-sans font-medium mt-10 bg-black text-white px-8 py-3 hover:text-black hover:bg-white duration-500">LEARN MORE</button></Link>
+
+    </div>
+    </div>
  </div>
   );
 };

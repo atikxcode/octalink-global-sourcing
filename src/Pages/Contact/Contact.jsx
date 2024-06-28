@@ -61,8 +61,8 @@ const Contact = () => {
     <div className='mt-24 '>
 
       <div className='flex flex-col  gap-8 items-center mx-auto container'>
-      <h2 className='text-5xl mb-10 font-normal'>Our Contact</h2>
-      <img className='h-[400px] w-[90%] bg-no-repeat mb-20 bg-cover bg-center rounded-lg' src={img} alt="" />
+      <h2 className='text-3xl md:text-4xl lg:text-5xl xl:text-5xl mb-10 font-normal'>Our Contact</h2>
+      <img className='h-[400px] w-[90%] bg-no-repeat mb-20 bg-cover bg-center rounded-lg ' src={img} alt="" />
       
       </div>
 
@@ -72,13 +72,13 @@ const Contact = () => {
 
      <div className='flex flex-col items-center mb-20 mt-20 gap-8'>
      <h2 className="font-sans font-semibold tracking-[3px] text-[#797F54]">OUR CONTACT</h2>
-     <p className="text-5xl font-normal">Get In Touch With Octalink Global Sourcing</p>
+     <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-normal text-center">Get In Touch With Octalink Global Sourcing</p>
      </div>
 
-     <div className='flex gap-16'>
+     <div className='flex flex-col md:flex-col lg:flex-col xl:flex-row gap-16 p-4 md:p-4 lg:p-4 xl:p-0'>
 
-<div className="flex flex-col border-[1px]  border-gray-400 p-8">
-<iframe className='w-[600px] h-[450px] mb-8 filter grayscale hover:filter-none transition-all duration-300' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.856244076833!2d90.39696697533932!3d23.85923797859631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c519d145d4f5%3A0xd2064d7d7b9e674c!2sOctalink%20Global%20Sourcing!5e0!3m2!1sen!2sbd!4v1719182793802!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+<div className="flex flex-col border-[1px]  border-gray-400 p-8 ">
+<iframe className='xl:w-[600px] h-[450px] mb-8 filter grayscale hover:filter-none transition-all duration-300' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.856244076833!2d90.39696697533932!3d23.85923797859631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c519d145d4f5%3A0xd2064d7d7b9e674c!2sOctalink%20Global%20Sourcing!5e0!3m2!1sen!2sbd!4v1719182793802!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 <div className='flex flex-col gap-2 items-start'>
   <h2 className='font-sans font-semibold text-gray-500 tracking-[1px]'>ADDRESS</h2>
   <p className='text-gray-500 text-lg font-normal hover:text-black duration-500 mb-8'>16 Road No.11, Dhaka 1230</p>
@@ -99,7 +99,7 @@ const Contact = () => {
 
 </div>
 
-    <div className='border-[1px]  border-gray-400 p-8'>
+    <div className='border-[1px]  border-gray-400 p-16 md:p-16 lg:p-16 xl:p-8'>
 
   <h2 className="text-3xl font-normal mb-6">Send us a message</h2>
   <p className='font-sans text-lg font-normal mb-10 text-gray-500'>We're here to assist you with any inquiries or concerns you may have. Please don't hesitate to reach out and share your thoughts, questions, or feedback. Your message is important to us, and we look forward to hearing from you soon.</p>
@@ -184,15 +184,15 @@ const Contact = () => {
 
      </div>
 
-     <div className=" mt-32 mb-0 w-full p-32 bg-[#f8f2e7]" data-aos="fade-up"
+     <div className=" mt-10 w-full p-4 md:p-16 lg:p-16 xl:p-32 bg-[#f8f2e7]" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="container mx-auto">
 
-      <div className="flex flex-row  gap-16">
+      <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row  gap-16">
 
         {/* 1st part */}
-        <div className=" w-1/2">
+        <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 order-2 md:order-1 lg:order-1 xl:order-1">
 
         <div className="collapse collapse-plus border-b-[1px] rounded-[0px] border-gray-400">
         <input type="radio" name="my-accordion-3 " defaultChecked /> 
@@ -248,31 +248,33 @@ const Contact = () => {
         </div>
         {/* 2nd part */}
 
-        <div className="w-1/2 ">
+        <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 order-1 md:order-2 lg:order-2 xl:order-2">
         <div className="flex flex-col gap-6">
-          <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px]">FAQS</h2>
-          <p className="text-5xl font-normal mb-10">Frequently Asked Questions</p>
-          <p className="font-normal text-[16px]  font-sans text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+          <h2 className="text-[#797F54] font-sans font-semibold tracking-[8px] text-[16px] w-full text-center md:text-start lg:text-start xl:text-start ">FAQS</h2>
+          <p className="text-[42px] md:text-[52px] lg:text-[62px] xl:text-[72px] w-full text-center md:text-start lg:text-start xl:text-start font-normal mb-10">Frequently Asked Questions</p>
+          <p className="font-normal text-[16px]  font-sans text-gray-400  ">Explore answers to commonly asked questions about Octalink Global Sourcing to learn more about our services, products, and commitment to excellence.</p>
           <div className="divider "></div> 
 
           <div className="flex flex-row justify-between">
             
             <div>
               <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">PHONE</h2>
-              <p className="text-xl font-normal mt-2 text-gray-500">+880 1999999999</p>
-              <p className="text-xl font-normal mt-2 text-gray-500">+880 1826766666</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1999999999</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1826766666</p>
             </div>
 
             <div>
               <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">EMAIL</h2>
-              <p className="text-xl font-normal mt-2 text-gray-500">octalink@gmail.com</p>
-              <p className="text-xl font-normal mt-2 text-gray-500">octalinkglob@gmail.com</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">octalink@gmail.com</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">octalinkglob@gmail.com</p>
             </div>
           </div>
 
         </div>
 
         </div>
+
+        
       </div>
 
       </div>
