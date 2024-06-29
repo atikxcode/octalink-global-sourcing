@@ -16,6 +16,7 @@ import EditProduct from "../Dashboard/EditProducts/EditProduct";
 import UserContacts from "../Dashboard/UserContacts/UserContacts";
 import PrivateRoutes from "../Pages/PrivateRoutes/PrivateRoutes";
 import AdminRoute from "../Pages/PrivateRoutes/AdminRoute";
+import Product from "../Pages/Products/Product";
 
 
 
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path:'/products',
         element: <Products></Products>
+      },
+      {
+        path: '/product',
+        element: <Product></Product>
       },
     
       {

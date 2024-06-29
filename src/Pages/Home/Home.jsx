@@ -15,6 +15,15 @@ import brand3 from '../../assets/brand3.png'
 import brand4 from '../../assets/brand4.png'
 import brand5 from '../../assets/brand5.png'
 import brand6 from '../../assets/brand6.png'
+import brand7 from '../../assets/brand7.jpg'
+import brand8 from '../../assets/brand8.webp'
+import brand9 from '../../assets/brand9.jpg'
+import brand10 from '../../assets/brand10.png'
+import brand11 from '../../assets/brand11.png'
+import brand12 from '../../assets/brand12.png'
+import brand13 from '../../assets/brand13.png'
+import brand14 from '../../assets/brand14.png'
+import brand15 from '../../assets/brand15.jpg'
 
 import icon1 from '../../assets/icon1.png'
 import icon2 from '../../assets/icon2.png'
@@ -182,6 +191,15 @@ const Home = () => {
       <img className="h-[100px] w-[200px] mr-28" src={brand4} alt="" />
       <img className="h-[100px] w-[200px] mr-28" src={brand5} alt="" />
       <img className="h-[100px] w-[200px] mr-28" src={brand6} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand7} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand8} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand9} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand10} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand11} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand12} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand13} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand14} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand15} alt="" />
     </Marquee>
 
     <hr className="w-full border-t-[1px] border-gray-600 my-24" />

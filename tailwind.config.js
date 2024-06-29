@@ -9,6 +9,7 @@ export default {
     extend: {
       boxShadow: {
         'custom': '5px 5px 5px 5px #00000040',
+        'custom2': '10px 10px 10px 0px #00000040',
       },
       fontFamily: {
         forum: '"Forum", serif',
