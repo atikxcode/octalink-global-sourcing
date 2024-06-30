@@ -44,6 +44,10 @@ const onSubmit = async (data) => {
               category: data.category,
               subcategory: data.subcategory,
               image: res.data.data.display_url,
+              fabricOrMaterial: data.fabricORmaterial,
+              designDetails: data.designDetails,
+              sustainability: data.sustainability
+
               
     }
     console.log(newProducts)
@@ -73,7 +77,7 @@ const onSubmit = async (data) => {
 
 
   return (
-    <div className=' mx-auto container my-auto'>
+    <div className=' mx-auto container my-auto min-h-screen'>
 
       <div className='flex justify-center my-10 md:my-16 lg:my-16 xl:my-20'>
         <h2 className='text-[#797F54] text-4xl text-center'>Add Products To The Website</h2>
@@ -85,6 +89,7 @@ const onSubmit = async (data) => {
 
 
        <div className='flex flex-col flex-1 p-4  '>
+
          <div className='flex flex-col items-start gap-4'>
          <label  className="text-[14px]    tracking-[2px] font-sans text-black" >Category</label>
          <select  className="block w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"  {...register("category", { required: true })}>
@@ -93,7 +98,7 @@ const onSubmit = async (data) => {
                     <option value="women">Women</option>
                     <option value="men">Men</option>
                 </select>
-                {errors.category && <span>This field is required</span>}
+                {errors.category && <span className='text-red-600'>This field is required</span>}
            
           
         
@@ -114,7 +119,7 @@ const onSubmit = async (data) => {
                         </select>
                     )}
                 />
-                {errors.subcategory && <span>This field is required</span>}
+                {errors.subcategory && <span className='text-red-600'>This field is required</span>}
            
         
          </div>
@@ -122,6 +127,25 @@ const onSubmit = async (data) => {
          <div  className='flex flex-col items-start gap-4'>
          <label   className="text-[14px] tracking-[2px] font-sans text-black" >Photo</label>
          <input required {...register('image', {required: true})}  type="file" className="file-input w-full max-w-xs font-sans" />
+         </div>
+
+         <div className='flex flex-col items-start gap-4 mt-6'>
+         <label  className="text-[14px]    tracking-[2px] font-sans text-black" >Fabric/Material</label>
+         <input {...register("fabricORmaterial", { required: true })} type="text" name="fabricORmaterial" placeholder="Fabric/Material Details" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                {errors.fabricORmaterial && <span className='text-red-600'>This field is required</span>}
+         </div>
+
+
+         <div className='flex flex-col items-start gap-4 mt-6'>
+         <label  className="text-[14px]    tracking-[2px] font-sans text-black" >Deisgn Details</label>
+         <input {...register("designDetails", { required: true })} type="text" name="designDetails" placeholder="Fabric/Material Details" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                {errors.designDetails && <span className='text-red-600'>This field is required</span>}
+         </div>
+
+         <div className='flex flex-col items-start gap-4 mt-6'>
+         <label  className="text-[14px]    tracking-[2px] font-sans text-black" >Sustainability</label>
+         <input {...register("sustainability", { required: true })} type="text" name="sustainability" placeholder="Fabric/Material Details" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                {errors.sustainability && <span className='text-red-600'>This field is required</span>}
          </div>
 
 

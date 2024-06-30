@@ -26,7 +26,7 @@ const Products = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-between p-4">
 
     <Link to="/product" state={{ collection: "men" }}>
-    <div className="relative mx-auto mb-10 w-[360px] h-[539px] shadow-custom2">
+    <div className="relative mx-auto mb-10 w-[90%] md:w-[90%] lg:w-[360px] xl:w-[360px] h-[539px] shadow-custom2">
         <img className="w-full h-full" src={mens} alt="Mens Collection" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl opacity-0 hover:opacity-100 transition-opacity duration-300">
             Men's Collection
@@ -35,7 +35,7 @@ const Products = () => {
 </Link>
 
 <Link to="/product" state={{ collection: "women" }}>
-    <div className="relative mx-auto mb-10 w-[360px] h-[539px] shadow-custom2">
+    <div className="relative mx-auto mb-10 w-[90%] md:w-[90%] lg:w-[360px] xl:w-[360px] h-[539px] shadow-custom2">
         <img className="w-full h-full" src={womens} alt="Mens Collection" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl opacity-0 hover:opacity-100 transition-opacity duration-300">
             Womens's Collection
@@ -44,7 +44,7 @@ const Products = () => {
 </Link>
 
 <Link to="/product" state={{ collection: "kids" }}>
-    <div className="relative mx-auto mb-10 w-[360px] h-[539px] shadow-custom2">
+    <div className="relative mx-auto mb-10 w-[90%] md:w-[90%] lg:w-[360px] xl:w-[360px] h-[539px] shadow-custom2">
         <img className="w-full h-full" src={kids} alt="Mens Collection" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl opacity-0 hover:opacity-100 transition-opacity duration-300">
             Kids Collection
