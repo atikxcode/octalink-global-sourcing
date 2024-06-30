@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
@@ -69,7 +69,7 @@ const Product = () => {
         </button>
       </div>
       
-      <aside className={` inset-y-0 left-0 z-30 w-64 h-screen overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700 transform ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-transform duration-300 ease-in-out fixed sm:fixed md:fixed lg:static xl:static `}>
+      <aside className={` inset-y-0 left-0 z-30 w-64 h-screen overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700 transform ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-transform duration-300 ease-in-out fixed sm:fixed md:fixed lg:static xl:static rounded-tr-[20px]`}>
         <div className="text-xl flex items-center gap-2 justify-center p-4">
           {/* <img src={logo} className='h-[50px] rounded-xl' alt="Logo" /> */}
           <p className='text-white text-lg font-sans hidden md:block lg:block xl:block uppercase'>{collection}'s collection</p>
@@ -86,9 +86,9 @@ const Product = () => {
             
           {
         [...new Set(filteredProducts?.map(product => product.subcategory))].map(subcategory => 
-          <a key={subcategory} onClick={() => selectedSubCategory(subcategory)} className="flex font-sans tracking-[2px] uppercase items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
-            <span className="mx-4 font-medium">{subcategory.replace(/-/g, ' ')}</span>
-          </a>
+          <a key={subcategory}  onClick={() => selectedSubCategory(subcategory)} className="flex italic font-sans tracking-[2px] uppercase items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 cursor-pointer">
+          <span className="mx-4 font-semibold">{subcategory.replace(/-/g, ' ')}</span>
+        </a>
         )
       }
             
@@ -102,21 +102,43 @@ const Product = () => {
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8'>
         {
-    (filteredSubCategory.length > 0 ? filteredSubCategory : filteredProducts)?.map((product) => (
+    (filteredSubCategory.length > 0 ? filteredSubCategory : filteredProducts)?.map((product, idx) => (
       <div key={product?._id}>
-        <div className={`bg-base-100 rounded-tr-[20%] rounded-bl-[20%] font-sans font-semibold mx-auto w-[250px] md:w-[300px] lg:w-[350px] xl:w-[350px] p-4 flex flex-col items-center gap-6 auto hover:translate-y-[-10px] duration-500`}>
+        <div className={`bg-base-100 rounded-tr-[20%] rounded-bl-[20%] font-sans font-semibold mx-auto w-[90%] md:w-[90%] lg:w-[350px] xl:w-[350px] p-4 flex flex-col items-center gap-6 auto hover:translate-y-[-10px] duration-500`}>
           <img className='h-[300px] hover:scale-110 duration-500' src={product?.image} alt="" />
-          <p className='text-gray-600'>
+          <p className='text-gray-600 italic'>
             <span className='font-bold text-black tracking-[1px]'>Fabric/Material:</span> {product?.fabricOrMaterial}
           </p>
-          <button className='p-3 rounded-tr-[20%] rounded-bl-[20%] md:p-4 lg:p-4 xl:p-4 text-[13px] tracking-wider md:text-[14px] lg:text-[14px] xl:text-[14px] font-bold border-0 text-white bg-black hover:bg-[#797F54] duration-300'>
+          <button onClick={()=>document.getElementById(`${idx}`).showModal()} className='p-3 italic font-semibold rounded-tr-[20%] rounded-bl-[20%] md:p-4 lg:p-4 xl:p-4 text-[13px] tracking-wider md:text-[14px] lg:text-[14px] xl:text-[14px] border-0 text-white bg-black hover:bg-[#797F54] duration-300'>
             View Details
           </button>
+          <dialog id={`${idx}`} className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box flex flex-col gap-4 items-center">
+          <h3 className="font-bold text-xl uppercase">{product?.category}'s Category</h3>
+          <img className='h-[300px] hover:scale-110 duration-500' src={product?.image} alt="" />
+          <h3 className="font-bold text-lg uppercase italic">{product?.subcategory}</h3>
+          <p className='text-[14px] italic  text-center'><span className='font-bold text-[16px]'>Fabric/Material:</span> {product?.fabricOrMaterial}</p>
+          <p className='text-[14px] italic text-center'><span className='font-bold text-[16px]'>Design Details:</span> {product?.designDetails}</p>
+          <p className='text-[14px] italic text-center'><span className='font-bold text-[16px]'>Sustainability:</span> {product?.sustainability}</p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
         </div>
       </div>
+      
     ))
+    
   }
         </div>
+
+       
+
+
       
       </div>
 
