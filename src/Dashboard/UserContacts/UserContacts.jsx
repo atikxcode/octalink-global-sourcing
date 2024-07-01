@@ -38,7 +38,7 @@ const UserContacts = () => {
           toast:true,
           position: "top-end",
           icon: "success",
-          title: "Product Updated Successfully.",
+          title: "Message Status Updated.",
           showConfirmButton: false,
           timer: 1500
         });
@@ -72,7 +72,7 @@ const UserContacts = () => {
               Swal.fire({
                 // toast:true,
                 title: "Deleted!",
-                text: "Product Has Been Deleted",
+                text: "Message Has Been Deleted",
                 icon: "success"
               }).then(() => {
                refetch()
