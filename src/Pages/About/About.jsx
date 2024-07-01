@@ -147,40 +147,40 @@ const About = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 p-4 md:p-0 lg:p-0 xl:p-0'>
 
 
-          <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
+          <div className='flex gap-4 p-6 md:p-8 lg:p-10 xl:p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaPen /></p>
             <h2 className='text-3xl font-normal'>Passion</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Passion fuels innovation and excellence, driving us to deliver exceptional products and services.</p>
+            <p className='w-[90%] md:w-[95%] lg:w-[100%] xl:w-[300px] text-gray-600 font-sans font-normal text-lg'>Passion fuels innovation and excellence, driving us to deliver exceptional products and services.</p>
           </div>
 
-          <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
+          <div className='flex gap-4 p-6 md:p-8 lg:p-10 xl:p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaUsers /></p>
             <h2 className='text-3xl font-normal'>Community</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>We believe in fostering a strong community through our commitment to sustainable practices and supporting local initiatives.</p>
+            <p className='w-[90%] md:w-[95%] lg:w-[100%] xl:w-[300px] text-gray-600 font-sans font-normal text-lg'>We believe in fostering a strong community through our commitment to sustainable practices and supporting local initiatives.</p>
           </div>
           
-          <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
+          <div className='flex gap-4 p-6 md:p-8 lg:p-10 xl:p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaCog /></p>
             <h2 className='text-3xl font-normal'>Commitment</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Our commitment lies in delivering excellence, innovation, and sustainable practices, ensuring unparalleled quality and service.</p>
+            <p className='w-[90%] md:w-[95%] lg:w-[100%] xl:w-[300px] text-gray-600 font-sans font-normal text-lg'>Our commitment lies in delivering excellence, innovation, and sustainable practices, ensuring unparalleled quality and service.</p>
           </div>
 
-          <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
+          <div className='flex gap-4 p-6 md:p-8 lg:p-10 xl:p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaChartBar /></p>
             <h2 className='text-3xl font-normal'>Growth</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Growth is our continuous journey, fueled by innovation, customer trust, and expanding global partnerships.</p>
+            <p className='w-[90%] md:w-[95%] lg:w-[100%] xl:w-[300px] text-gray-600 font-sans font-normal text-lg'>Growth is our continuous journey, fueled by innovation, customer trust, and expanding global partnerships.</p>
           </div>
 
-          <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
+          <div className='flex gap-4 p-6 md:p-8 lg:p-10 xl:p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaLock /></p>
             <h2 className='text-3xl font-normal'>Honesty</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Honesty forms the cornerstone of our values, guiding transparent relationships and integrity in all our endeavors.</p>
+            <p className='w-[90%] md:w-[95%] lg:w-[100%] xl:w-[300px] text-gray-600 font-sans font-normal text-lg'>Honesty forms the cornerstone of our values, guiding transparent relationships and integrity in all our endeavors.</p>
           </div>
 
-          <div className='flex gap-4 p-12 flex-col items-start border-[1px] border-gray-300'>
+          <div className='flex gap-4 p-6 md:p-8 lg:p-10 xl:p-12 flex-col items-start border-[1px] border-gray-300'>
             <p className='text-lg text-gray-700 bg-gray-300 p-4 rounded-[50%]'><FaUser /></p>
             <h2 className='text-3xl font-normal'>Team Work</h2>
-            <p className='w-[300px] text-gray-600 font-sans font-normal text-lg'>Teamwork is the essence of our success, fostering collaboration and synergy to achieve shared goals and drive innovation.</p>
+            <p className='w-[90%] md:w-[95%] lg:w-[100%] xl:w-[300px] text-gray-600 font-sans font-normal text-lg'>Teamwork is the essence of our success, fostering collaboration and synergy to achieve shared goals and drive innovation.</p>
           </div>
 
           

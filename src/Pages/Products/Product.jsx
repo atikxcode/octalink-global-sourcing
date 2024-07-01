@@ -1,9 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import 'aos/dist/aos.css'
+import Aos from "aos";
+
 
 const Product = () => {
   const axiosPublic = useAxiosPublic();
@@ -13,6 +16,16 @@ const Product = () => {
   const [filteredSubCategory, setFilteredSubCategory] = useState([]);
 
   console.log(collection);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
+useEffect(() => {
+  Aos.init();
+},[])
+
+
 
   const {isPending, isError, error, refetch, data: products } = useQuery({
     queryKey: ['products'],
@@ -59,7 +72,8 @@ const Product = () => {
   return (
 
 
-<div {...handlers} className="relative flex  w-full my-auto ">
+<div {...handlers} className="relative flex  w-full my-auto " data-aos="fade-up"
+    data-aos-duration="1500">
       <div className="lg:hidden">
         <button
           className="text-gray-600 dark:text-gray-400 p-4"
