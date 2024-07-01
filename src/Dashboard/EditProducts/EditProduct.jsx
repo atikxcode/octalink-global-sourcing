@@ -80,7 +80,7 @@ const EditProduct = () => {
     <div className=' mx-auto container my-auto'>
 
     <div className='flex justify-center my-20'>
-      <h2 className='text-[#797F54] text-4xl'>Add Products To The Website</h2>
+      <h2 className='text-[#797F54] text-4xl'>Edit Product Details</h2>
     </div>
   <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -156,7 +156,7 @@ const EditProduct = () => {
          className='mt-6 btn bg-black text-white text-sm text-center hover:bg-[#797F54] duration-500' 
          
        >
-         Add Product
+         Confirm Edit
        </button>
      
      </div>

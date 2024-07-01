@@ -522,7 +522,7 @@ const Home = () => {
 
  <div className='bg-black mt-10 p-16 md:p-24 lg:p-30 xl:p-32 w-full'>
     <div className='flex flex-col items-center'>
-    <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white] uppercase">Discover the Finest Textiles</h2>
+    <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white] uppercase text-center">Discover the Finest Textiles</h2>
     <p className="text-[38px] md:text-[58px] lg:text-[68px] xl:text-[68px] text-center w-[350px] md:w-[700px] lg:w-[700px] xl:w-[700px] text-white font-normal">Premium Quality, Innovative Designs, Sustainable Solutions</p>
     <Link to='/products'><button className="text-black text-[14px] font-sans font-medium mt-10 bg-white  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">EXPLORE NOW</button></Link>
 
