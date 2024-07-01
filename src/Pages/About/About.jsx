@@ -35,16 +35,25 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 
+
+
+
+
 const About = () => {
 
   useEffect(() => {
     Aos.init();
   },[])
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
 
 
   return (
-    <div>
+    <div data-aos="fade-up"
+    data-aos-duration="1500">
 
       <Helmet>
       <meta charSet="utf-8" />
@@ -52,7 +61,8 @@ const About = () => {
 
       </Helmet>
 
-      <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between mt-16 md:mt-24 lg:mt-24 xl:mt-24 mb-20 md:mb-36 lg:mb-36 xl:mb-36 gap-8 md:gap-0 lg:gap-0  xl:gap-0">
+      <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between mt-16 md:mt-24 lg:mt-24 xl:mt-24 mb-20 md:mb-36 lg:mb-36 xl:mb-36 gap-8 md:gap-0 lg:gap-0  xl:gap-0"  data-aos="fade-up"
+     data-aos-duration="1500">
 
         {/* 1st part */}
         <div className="flex flex-col items-center md:items-start lg:items-start xl:items-start gap-10 ml-0 md:ml-20 lg:ml-20 xl:ml-20 w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
@@ -334,4 +344,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About  ;

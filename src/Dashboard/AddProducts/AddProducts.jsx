@@ -138,13 +138,13 @@ const onSubmit = async (data) => {
 
          <div className='flex flex-col items-start gap-4 mt-6'>
          <label  className="text-[14px]    tracking-[2px] font-sans text-black" >Deisgn Details</label>
-         <input {...register("designDetails", { required: true })} type="text" name="designDetails" placeholder="Fabric/Material Details" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+         <input {...register("designDetails", { required: true })} type="text" name="designDetails" placeholder="Give Design Details" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 {errors.designDetails && <span className='text-red-600'>This field is required</span>}
          </div>
 
          <div className='flex flex-col items-start gap-4 mt-6'>
          <label  className="text-[14px]    tracking-[2px] font-sans text-black" >Sustainability</label>
-         <input {...register("sustainability", { required: true })} type="text" name="sustainability" placeholder="Fabric/Material Details" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+         <input {...register("sustainability", { required: true })} type="text" name="sustainability" placeholder="Give Sustainability Information" className="block  w-full font-sans px-4 py-2 mb-4 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg   focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 {errors.sustainability && <span className='text-red-600'>This field is required</span>}
          </div>
 

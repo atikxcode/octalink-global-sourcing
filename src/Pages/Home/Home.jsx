@@ -86,6 +86,11 @@ const Home = () => {
     Aos.init();
   },[])
 
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
   const {isPending, isError, error, refetch, data: reviews } = useQuery({
     queryKey: ['reviews'],
     queryFn: async () => {
@@ -119,11 +124,11 @@ const Home = () => {
       </Helmet>
  <div className="divider "></div> 
 
- <div className="pt-20 flex flex-col items-center gap-4 ">
+ <div className="pt-20 flex flex-col items-center ">
     <h2 className="text-[#797F54] tracking-wider">OCTALINK GLOBAL SOURCING</h2>
     <p className="text-[42px] md:text-[52px] lg:text-[62px] xl:text-[72px] font-normal text-center w-[80%] md:w-[50%] lg:w-full xl:w-full">Where Sophistication and Style Meet</p>
     <p className="text-center w-[300px] md:w-[400px] lg:w-[400px] xl:w-[500px] text-gray-500">Discover timeless fashion crafted for the discerning and stylish. Our curated collections blend classic elegance with contemporary trends, redefining your wardrobe with every piece.</p>
-    <div className="flex gap-4 items-center mb-10">
+    <div className="flex gap-4 items-center mb-10 mt-10">
       <Link to='/login'><button className="text-white text-[14px] font-sans font-semibold h-[40px]   w-[120px] md:w-[150px] lg:w-[150px] xl:w-[150px] bg-black hover:bg-[#797F54] duration-300">GET STARTED</button></Link>
       <Link to='/contact'><button className="text-black text-[14px] font-sans font-semibold h-[40px] w-[120px] md:w-[150px] lg:w-[150px] xl:w-[150px] bg-inherit border-[1px] border-black hover:bg-[#797F54] hover:border-[#797F54] hover:text-white duration-300">CONTACT US</button></Link>
     </div>
@@ -515,7 +520,19 @@ const Home = () => {
 
 
 
-    <div className=" mt-10 w-full p-4 md:p-16 lg:p-16 xl:p-32 bg-[#f8f2e7]" data-aos="fade-up"
+ <div className='bg-black mt-10 p-16 md:p-24 lg:p-30 xl:p-32 w-full'>
+    <div className='flex flex-col items-center'>
+    <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white] uppercase">Discover the Finest Textiles</h2>
+    <p className="text-[38px] md:text-[58px] lg:text-[68px] xl:text-[68px] text-center w-[350px] md:w-[700px] lg:w-[700px] xl:w-[700px] text-white font-normal">Premium Quality, Innovative Designs, Sustainable Solutions</p>
+    <Link to='/products'><button className="text-black text-[14px] font-sans font-medium mt-10 bg-white  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">EXPLORE NOW</button></Link>
+
+    </div>
+    </div>
+
+
+
+
+    <div className="w-full p-4 md:p-16 lg:p-16 xl:p-32 bg-[#f8f2e7]" data-aos="fade-up"
      data-aos-duration="1500">
 
       <div className="container mx-auto">
@@ -615,14 +632,10 @@ const Home = () => {
    
 
  </div>
- <div className='bg-[#797F54] p-16 md:p-24 lg:p-30 xl:p-32'>
-    <div className='flex flex-col items-center'>
-    <h2 className="font-sans mb-8 font-semibold tracking-[3px] text-[white]">GET STARTED</h2>
-    <p className="text-[38px] md:text-[58px] lg:text-[68px] xl:text-[68px] text-center w-[350px] md:w-[700px] lg:w-[700px] xl:w-[700px] text-white font-normal">A Classic Ensemble From Head To Toe</p>
-    <Link to='/'><button className="text-[14px] font-sans font-medium mt-10 bg-black text-white px-8 py-3 hover:text-black hover:bg-white duration-500">LEARN MORE</button></Link>
 
-    </div>
-    </div>
+
+
+
  </div>
   );
 };

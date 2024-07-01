@@ -22,6 +22,9 @@ const Contact = () => {
     Aos.init();
   },[])
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
     defaultValues: {
@@ -59,7 +62,8 @@ const Contact = () => {
 
 
   return (
-    <div className='mt-24 '>
+    <div className='mt-24 ' data-aos="fade-up"
+    data-aos-duration="1500">
 
     <Helmet>
       <meta charSet="utf-8" />
