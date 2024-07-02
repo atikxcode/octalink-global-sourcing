@@ -4,8 +4,6 @@ import { FaBars } from 'react-icons/fa';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
-import 'aos/dist/aos.css'
-import Aos from "aos";
 
 
 const Product = () => {
@@ -21,9 +19,7 @@ const Product = () => {
     window.scrollTo(0, 0);
 }, []);
 
-useEffect(() => {
-  Aos.init();
-},[])
+
 
 
 
@@ -52,7 +48,7 @@ useEffect(() => {
 
   let filteredProducts = products.filter(product => product.category === collection)
  
-  console.log(filteredProducts)
+  // console.log(filteredProducts)
   
 
   if (isError) {
@@ -72,8 +68,7 @@ useEffect(() => {
   return (
 
 
-<div {...handlers} className="relative flex  w-full my-auto " data-aos="fade-up"
-    data-aos-duration="1500">
+<div {...handlers} className="relative flex  w-full my-auto">
       <div className="lg:hidden">
         <button
           className="text-gray-600 dark:text-gray-400 p-4"

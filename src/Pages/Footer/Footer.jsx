@@ -98,7 +98,7 @@ const Footer = () => {
 
 
          <div className="flex items-center gap-3 mb-36 justify-center md:justify-start lg:justify-start xl:justify-start">
-      <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaFacebookF /></p>
+      <a href="https://www.facebook.com/profile.php?id=100063438861532" target='_blank'><p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaFacebookF /></p></a>
       <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaTwitter /></p>
       <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaInstagram /></p>
       <p className="rounded-[50%] text-[15px] border-[1px] border-gray-600 p-[7px] bg-inherit hover:bg-white hover:text-black hover:border-[1px] hover:border-white duration-500"><FaDribbble /></p>

@@ -135,7 +135,7 @@ const Home = () => {
 
     <Link to='/about'><p className="mb-5 font-sans font-normal text-gray-500">or <span className="underline underline-offset-[3px]">Discover our story</span></p></Link>
     <div className="flex items-center gap-3 mb-36">
-      <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaFacebookF /></p>
+      <a href="https://www.facebook.com/profile.php?id=100063438861532" target="_blank"> <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaFacebookF /></p></a>
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaTwitter /></p>
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaInstagram /></p>
       <p className="rounded-[50%] border-[1px] border-gray-400 p-2 bg-inherit hover:bg-black hover:text-white hover:border-[1px] hover:border-black duration-500"><FaDribbble /></p>
@@ -607,14 +607,14 @@ const Home = () => {
             
             <div>
               <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">PHONE</h2>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1999999999</p>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1826766666</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1718-854866</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1971-112550</p>
             </div>
 
             <div>
               <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">EMAIL</h2>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">octalink@gmail.com</p>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">octalinkglob@gmail.com</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">designer.octalink@gmail.com</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">reza.kamrul@octalink-bd.com</p>
             </div>
           </div>
 

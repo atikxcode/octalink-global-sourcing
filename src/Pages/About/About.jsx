@@ -1,6 +1,6 @@
 import CountUp from 'react-countup';
 import image from '../../assets/man-s-hands-sewing-leather-workshop-textile-vintage-industrial-man-female-profession-gender-equality-concept_155003-18345.jpg'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import 'aos/dist/aos.css'
 import Aos from "aos";
 import image2 from '../../assets/aboutsectionimage2.jpg'
@@ -33,13 +33,23 @@ import icon2 from '../../assets/icon2.png'
 import icon3 from '../../assets/icon3.png'
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useForm } from 'react-hook-form';
+import { AuthContext } from '../../Providers/AuthProvider';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import Swal from 'sweetalert2';
 
 
 
 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 
 const About = () => {
+
+  const axiosPublic = useAxiosPublic();
+
+  const {user} = useContext(AuthContext)
 
   useEffect(() => {
     Aos.init();
@@ -48,6 +58,58 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 }, []);
+
+
+const { register, handleSubmit, reset, formState: { errors } } = useForm({
+  defaultValues: {
+    fullName: user ? user?.displayName : '',
+    email: user ? user?.email : ''
+  }
+});
+
+const onSubmit = async (data) => {
+
+  // console.log(data)
+
+  const imageFile = { image: data.image[0] };
+  const res = await axiosPublic.post(image_hosting_api, imageFile, {
+    headers: {
+      'content-type': 'multipart/form-data'
+    }
+  });
+
+  if (res.data.success) {
+    const reviewDetails = {
+      photo: res.data.data.display_url,
+      name: data.fullName,
+      // Email: data.email,
+      review: data.review,
+    }
+
+    console.log(reviewDetails)
+
+    console.log(reviewDetails)
+    axiosPublic.post('/reviews', reviewDetails)
+    .then(res => {
+      if(res.data.insertedId){
+        reset(),
+        Swal.fire({
+          toast:true,
+
+          position: "top-end",
+          icon: "success",
+          title: "Review Submitted. Thanks For Your Time.",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    })
+  }
+
+
+
+
+};
 
 
 
@@ -189,6 +251,90 @@ const About = () => {
         </div>
 
       </div>
+
+      <div className='border-[1px]  border-gray-400 p-16 md:p-16 lg:p-16 xl:p-16 mx-auto container my-20'>
+
+<h2 className="text-3xl font-normal mb-6">Share Your Experience with Us!</h2>
+<p className='font-sans text-lg font-normal mb-10 text-gray-500'>We Value Your Feedback to Help Us Improve and Serve You Better</p>
+ 
+
+<form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mb-10 flex flex-col gap-4">
+        <label className="text-gray-500 font-sans font-semibold text-[12px] tracking-[1px]" htmlFor="fullName">
+          FULL NAME*
+        </label>
+        <input
+          className="bg-inherit border-b-[1px] border-gray-400 font-normal font-sans text-lg   w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-black"
+          id="fullName"
+          type="text"
+          placeholder="Your Full Name"
+          defaultValue={user ? user.displayName : ''}
+          {...register('fullName', { required: true })}
+        />
+        {errors.fullName && <p className="text-red-500 text-xs italic">Full Name is required.</p>}
+      </div>
+      <div className="mb-4 flex flex-col gap-8">
+
+        <div className='w-full'>
+        <label className="text-gray-500 font-sans font-semibold text-[12px] tracking-[2px]" htmlFor="email">
+          Email
+        </label>
+        <input
+          className="bg-inherit border-b-[1px] border-gray-400 font-normal font-sans text-lg   w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-black"
+          id="email"
+          type="email"
+          placeholder="Your Email"
+          defaultValue={user ? user.email : ''}
+          {...register('email', { required: true })}
+        />
+        {errors.email && <p className="text-red-500 text-xs italic">Email is required.</p>}
+        </div>
+
+       <div className='w-full'>
+          <label className="text-gray-500 font-sans font-semibold text-[12px] tracking-[2px]" htmlFor="phone">
+            Image
+          </label>
+          <input 
+          {...register("image", { required: true })}  className="bg-inherit border-b-[1px] border-gray-400 font-normal font-sans text-lg   w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-black" 
+          type="file"
+          name="image"
+           placeholder="Image URL"
+          required 
+          />
+         
+          {errors.phone && <p className="text-red-500 text-xs italic">Phone number is required.</p>}
+          </div>
+    
+
+      </div>
+
+
+      <div className="mb-4 mt-8">
+        <label className="text-gray-500 font-sans font-semibold text-[12px] tracking-[2px]" htmlFor="review">
+          Review
+        </label>
+        <textarea
+         className="bg-inherit border-b-[1px] border-gray-400 font-normal font-sans text-lg   w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-black"
+          id="review"
+          rows="6"
+          placeholder="Your Review"
+          {...register('review', { required: true })}
+        ></textarea>
+        {errors.review && <p className="text-red-500 text-xs italic">Message is required.</p>}
+      </div>
+      <div className="flex items-center justify-between">
+        <button
+          className="text-[14px] w-full text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500"
+          type="submit"
+        >
+          SEND MESSAGE
+        </button>
+      </div>
+    </form>
+ 
+  </div>
+
+
 
 
     <div className='flex flex-col' data-aos="fade-up"
@@ -344,4 +490,4 @@ const About = () => {
   );
 };
 
-export default About  ;
+export default About;

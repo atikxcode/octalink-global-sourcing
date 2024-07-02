@@ -270,14 +270,14 @@ const Contact = () => {
             
             <div>
               <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">PHONE</h2>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1999999999</p>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1826766666</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1718-854866</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500 ">+880 1971-112550</p>
             </div>
 
             <div>
               <h2 className="font-sans text-[14px] font-semibold text-[#797F54]">EMAIL</h2>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">octalink@gmail.com</p>
-              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">octalinkglob@gmail.com</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">designer.octalink@gmail.com</p>
+              <p className="text-[14px] md:text-[14px] lg:text-xl xl:text-xl font-normal mt-2 text-gray-500">reza.kamrul@octalink-bd.com</p>
             </div>
           </div>
 
