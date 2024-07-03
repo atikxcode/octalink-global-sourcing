@@ -78,7 +78,7 @@ const Product = () => {
         </button>
       </div>
       
-      <aside className={` inset-y-0 left-0 z-30 w-64 h-screen overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700 transform ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-transform duration-300 ease-in-out fixed sm:fixed md:fixed lg:static xl:static rounded-tr-[20px]`}>
+      <aside className={` inset-y-0 left-0 z-30 w-64 h-screen overflow-y-auto  border-r rtl:border-r-0 rtl:border-l bg-gray-900 border-gray-700 transform ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-transform duration-300 ease-in-out fixed sm:fixed md:fixed lg:static xl:static rounded-tr-[20px]`}>
         <div className="text-xl flex items-center gap-2 justify-center p-4">
           {/* <img src={logo} className='h-[50px] rounded-xl' alt="Logo" /> */}
           <p className='text-white text-lg font-sans hidden md:block lg:block xl:block uppercase'>{collection}'s collection</p>
@@ -95,7 +95,7 @@ const Product = () => {
             
           {
         [...new Set(filteredProducts?.map(product => product.subcategory))].map(subcategory => 
-          <a key={subcategory}  onClick={() => selectedSubCategory(subcategory)} className="flex italic font-sans tracking-[2px] uppercase items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 cursor-pointer">
+          <a key={subcategory}  onClick={() => selectedSubCategory(subcategory)} className="flex italic font-sans tracking-[2px] uppercase items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 cursor-pointer">
           <span className="mx-4 font-semibold">{subcategory.replace(/-/g, ' ')}</span>
         </a>
         )
@@ -109,7 +109,7 @@ const Product = () => {
 
       <div className="flex-1  md:p-0 lg:p-4 xl:p-10 ">
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-8'>
         {
     (filteredSubCategory.length > 0 ? filteredSubCategory : filteredProducts)?.map((product, idx) => (
       <div key={product?._id}>

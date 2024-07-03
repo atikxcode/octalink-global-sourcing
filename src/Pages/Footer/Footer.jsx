@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
+import logo from '../../assets/octalink-logo.png'
 
 const Footer = () => {
 
@@ -68,7 +69,7 @@ const Footer = () => {
 
 
         <div className='flex flex-row md:flex-row lg:flex-row xl:flex-row items-center md:items-center lg:items-center xl:items-center gap-4 justify-center md:justify-start lg:justify-start xl:justify-start '>
-        <img className='w-[60px] md:w-[70px] lg:w-[70px] xl:w-[70px]' src={image} alt="" />
+        <img className='w-[60px] md:w-[70px] lg:w-[70px] xl:w-[70px]' src={logo} alt="" />
         <h2 className='text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-normal'>Octalink Global Sourcing</h2>
         </div>
 
