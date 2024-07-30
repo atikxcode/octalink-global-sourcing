@@ -307,7 +307,7 @@ If you have any questions about this Privacy Policy, please contact us at octali
     <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between py-4 mx-auto container gap-4'>
 
       <div className='order-2 md:order-1 lg:order-1 xl:order-1'>
-      <h2 className='font-sans font-normal text-center'>Copyright © 2024 - All Right Reserved By Atiqul Islam</h2>
+      <h2 className='font-sans font-normal text-center'>Copyright © 2024 - All Right Reserved By <a href="https://atik-portfolio-0108.vercel.app/" target='_blank'>Atiqul Islam</a></h2>
       </div>
       
       <div className='order-1 md:order-2 lg:order-2 xl:order-2 flex gap-4 items-center justify-center '>
