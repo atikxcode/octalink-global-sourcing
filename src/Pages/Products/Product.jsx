@@ -114,7 +114,7 @@ const Product = () => {
     (filteredSubCategory.length > 0 ? filteredSubCategory : filteredProducts)?.map((product, idx) => (
       <div key={product?._id}>
         <div className={`bg-base-100 rounded-tr-[20%] rounded-bl-[20%] font-sans font-semibold mx-auto w-[90%] md:w-[90%] lg:w-[350px] xl:w-[350px] p-4 flex flex-col items-center gap-6 auto hover:translate-y-[-10px] duration-500`}>
-          <img className='h-[300px] hover:scale-110 hover:rotate-[10deg] duration-500' src={product?.image} alt="" />
+          <img className='h-[300px] hover:scale-110  duration-500' src={product?.image} alt="" />
           <p className='text-gray-600 italic'>
             <span className='font-bold text-black tracking-[1px]'>Fabric/Material:</span> {product?.fabricOrMaterial}
           </p>
