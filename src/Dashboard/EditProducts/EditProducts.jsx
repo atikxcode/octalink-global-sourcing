@@ -196,6 +196,7 @@ const EditProducts = () => {
           <ul className="p-2">
             <li onClick={() => handleSubcategorySelect('coat-pant')}><a>Coat Pant</a></li>
             <li onClick={() => handleSubcategorySelect('denim')}><a>Denim</a></li>
+            <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
             <li onClick={() => handleSubcategorySelect('hoodie')}><a>Hoodie</a></li>
             <li onClick={() => handleSubcategorySelect('jacket')}><a>Jacket</a></li>
             <li onClick={() => handleSubcategorySelect('shorts')}><a>Shorts</a></li>
@@ -214,6 +215,7 @@ const EditProducts = () => {
             <li onClick={() => handleSubcategorySelect('ladies-skirts')}><a>Ladies Skirts</a></li>
             <li onClick={() => handleSubcategorySelect('tops')}><a>Tops</a></li>
             <li onClick={() => handleSubcategorySelect('twill')}><a>Twill</a></li>
+            <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
             {/* <li onClick={() => handleSubcategorySelect('coat-pant')}><a>Sweaters</a></li> */}
           </ul>
         </li>
@@ -243,6 +245,7 @@ const EditProducts = () => {
           <ul className="p-2 w-36">
           <li onClick={() => handleSubcategorySelect('coat-pant')}><a>Coat Pant</a></li>
             <li onClick={() => handleSubcategorySelect('denim')}><a>Denim</a></li>
+            <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
             <li onClick={() => handleSubcategorySelect('hoodie')}><a>Hoodie</a></li>
             <li onClick={() => handleSubcategorySelect('jacket')}><a>Jacket</a></li>
             <li onClick={() => handleSubcategorySelect('shorts')}><a>Shorts</a></li>
@@ -262,6 +265,8 @@ const EditProducts = () => {
             <li onClick={() => handleSubcategorySelect('ladies-skirts')}><a>Ladies Skirts</a></li>
             <li onClick={() => handleSubcategorySelect('tops')}><a>Tops</a></li>
             <li onClick={() => handleSubcategorySelect('twill')}><a>Twill</a></li>
+            <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
+
           </ul>
         </details>
       </li>

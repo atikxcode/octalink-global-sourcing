@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query';
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const categoryOptions = {
-  kids: ["coat-pant", "denim", "sweaters", "hoodie", "jacket", "shorts", "swipe-shirt", "t-shirt", "trouser"],
+  kids: ["coat-pant", "denim", "hoodie", "jacket", "shorts", "swipe-shirt", "t-shirt", "trouser", "sweaters"],
   women: ["coat-long-pants", "coat-tops", "denim-long-pants", "ladies-skirts", "tops", "twill", "sweaters"],
   men: ["coat-jacket", "hoodie", "mens-cargo-pant", "mens-long-pant", "polo-shirt", "sweaters", "swipe-shirt", "t-shirt"]
 };

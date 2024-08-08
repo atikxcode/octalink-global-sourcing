@@ -26,7 +26,7 @@ import member1 from '../../assets/members.jpg'
 import member2 from '../../assets/members2.jpg'
 import member3 from '../../assets/members3.jpg'
 import member4 from '../../assets/members4.jpg'
-import { FaChartBar, FaCog, FaFacebookF, FaInstagram, FaLock, FaPen, FaTwitter, FaUser, FaUsers } from 'react-icons/fa';
+import { FaChartBar, FaCog, FaFacebookF, FaInstagram, FaLock, FaPen, FaTwitter, FaUser, FaUsers, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa';
 import './About.css'
 import icon1 from '../../assets/icon1.png'
 import icon2 from '../../assets/icon2.png'
@@ -37,6 +37,10 @@ import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
+import company from '../../assets/company.jpg'
+import company1 from '../../assets/company1.png'
+import company2 from '../../assets/company2.jpg'
+import company3 from '../../assets/company3.png'
 
 
 
@@ -348,12 +352,14 @@ const onSubmit = async (data) => {
 <p className="text-5xl font-normal text-center">Meet Our Professional Team</p>
 </div>
 
-<div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-14 mx-auto container '>
+{/* Company's Heads */}
+
+<div className='flex flex-wrap flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-14 mx-auto container '>
 
 <div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
 {/* Image */}
 <img 
-  src={member2} 
+  src={company} 
   alt="Sample" 
   className="w-full h-full object-cover rounded-lg"
 />
@@ -361,16 +367,27 @@ const onSubmit = async (data) => {
 {/* Overlay */}
 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
   {/* <FaFacebook className="text-white text-4xl          " /> */}
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+<div className='flex flex-col items-center gap-5 absolute bottom-10'>
+{/* Social Media link */}
+<div className='flex flex-row gap-4'>
+<a href="https://www.facebook.com/Kamrul2127" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p></a>
+<a href="HTTPS://wa.me/8801718854866" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaWhatsapp /></p></a>
+
+</div>
+{/* Name And Position */}
+<div className='flex flex-col items-center'>
+<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Md. Kamrul Hasan Reza</h2>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Provider & CEO</p>
+</div>
+
+</div>
 </div>
 </div>
 
 <div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
 {/* Image */}
 <img 
-  src={member1} 
+  src={company2} 
   alt="Sample" 
   className="w-full h-full object-cover rounded-lg"
 />
@@ -378,16 +395,24 @@ const onSubmit = async (data) => {
 {/* Overlay */}
 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
   {/* <FaFacebook className="text-white text-4xl          " /> */}
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+<div className='flex flex-col items-center gap-5 absolute bottom-10'>
+<div className='flex flex-row gap-4'>
+<a href="https://www.facebook.com/saiful.anik.3" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p></a>
+<a href="HTTPS://wa.me/8801632050898" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaWhatsapp /></p></a>
+
+</div>
+<div className='flex flex-col items-center'>
+<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Saiful Islam Anik</h2>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">The Head Designer</p>
+</div>
+</div>
 </div>
 </div>
 
 <div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
 {/* Image */}
 <img 
-  src={member3} 
+  src={company1} 
   alt="Sample" 
   className="w-full h-full object-cover rounded-lg"
 />
@@ -395,9 +420,17 @@ const onSubmit = async (data) => {
 {/* Overlay */}
 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
   {/* <FaFacebook className="text-white text-4xl          " /> */}
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+<div className='flex flex-col items-center gap-5 absolute bottom-10'>
+<div className='flex flex-row gap-4'>
+<a href="https://www.facebook.com/asm.masud.5?mibextid=LQQJ4d" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p></a>
+<a href="HTTPS://wa.me/8801719138419" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaWhatsapp /></p></a>
+
+</div>
+<div className='flex flex-col items-center'>
+<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">A S M Masud</h2>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Merchandising Manager</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -412,9 +445,43 @@ const onSubmit = async (data) => {
 {/* Overlay */}
 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
   {/* <FaFacebook className="text-white text-4xl          " /> */}
+<div className='flex flex-col items-center gap-5 absolute bottom-10'>
+<div className='flex flex-row gap-4'>
 <p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaTwitter /></p>
-<p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaInstagram /></p>
+<a href="HTTPS://wa.me/8801720514906" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaWhatsapp /></p></a>
+
+</div>
+<div className='flex flex-col items-center'>
+<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Md. Raju</h2>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Merchandising Manager</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
+{/* Image */}
+<img 
+  src={company3} 
+  alt="Sample" 
+  className="w-full h-full object-cover rounded-lg"
+/>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 ease-in-out flex justify-center items-center rounded-lg gap-4">
+  {/* <FaFacebook className="text-white text-4xl          " /> */}
+<div className='flex flex-col items-center gap-5 absolute bottom-10'>
+<div className='flex flex-row gap-4'>
+<a href="https://www.facebook.com/sadak.saiful?mibextid=ZbWKwL" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaFacebookF /></p></a>
+<a href="HTTPS://wa.me/8801710735702" target='_blank'><p className="rounded-[50%] text-[#797F54] text-[15px] border-[1px] border-white p-[7px] bg-white hover:text-black  hover:border-[1px] hover:border-white duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out"><FaWhatsapp /></p></a>
+
+</div>
+<div className='flex flex-col items-center'>
+<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Saiful Islam Sadek</h2>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Quality Manager</p>
+</div>
+</div>
 </div>
 </div>
 
