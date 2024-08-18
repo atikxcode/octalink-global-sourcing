@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet";
 import 'aos/dist/aos.css'
 import Aos from "aos";
-import mens from '../../assets/mens.avif'
-import womens from '../../assets/women2.jpg'
+import mens from '../../assets/mens2.jpg'
+import womens from '../../assets/women3.jpg'
 import kids from '../../assets/kids.avif'
 import { Link } from "react-router-dom";
 import { useEffect } from "react";

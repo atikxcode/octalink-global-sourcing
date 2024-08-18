@@ -118,13 +118,13 @@ const Footer = () => {
 
             <div className='mb-8'>
               <h2 className='text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-normal mb-4'>Address</h2>
-              <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>16 Road No.11 Uttara, <br />Dhaka 1230</p>
+              <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500 w-[200px] xl:w-full'>House #16, Road #11, Sector #01 Uttara,  <br />Dhaka 1230, Bangladesh</p>
             </div>
 
             <div>
               <h2 className='text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-normal mb-4'>Contact</h2>
               <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>+880 1718-854866</p>
-              <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>octalink@gmail.com</p>
+              <p className='text-gray-400 font-sans text-lg font-semibold mb-2 hover:text-white duration-500'>reza.kamrul@octalink-bd.com</p>
             </div>
 
           </div>
@@ -283,7 +283,7 @@ If you have any questions about this Privacy Policy, please contact us at octali
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle text-black">
   <div className="modal-box flex flex-col items-center text-xl">
     <h3 className="font-bold text-lg">Contacts Info</h3>
-    <p className="py-4">Email: octalink@gmail.com</p>
+    <p className="py-4">Email: reza.kamrul@octalink-bd.com</p>
     <p className="py-4">Phone Number: +880 1718-854866 /  +880 1971-112550</p>
     <p className="py-4">Address: House: 16, Road: 11, Sector 01 Uttara, Dhaka 1230</p>
     <div className="modal-action">

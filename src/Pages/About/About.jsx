@@ -22,6 +22,19 @@ import brand12 from '../../assets/brand12.png'
 import brand13 from '../../assets/brand13.png'
 import brand14 from '../../assets/brand14.png'
 import brand15 from '../../assets/brand15.jpg'
+import brand16 from '../../assets/brand16.JPG'
+import brand17 from '../../assets/brand17.JPG'
+import brand18 from '../../assets/brand18.JPG'
+import brand19 from '../../assets/brand19.JPG'
+import brand20 from '../../assets/brand20.JPG'
+import brand21 from '../../assets/brand21.JPG'
+import brand22 from '../../assets/brand22.JPG'
+import brand23 from '../../assets/brand23.webp'
+
+
+
+
+
 import member1 from '../../assets/members.jpg'
 import member2 from '../../assets/members2.jpg'
 import member3 from '../../assets/members3.jpg'
@@ -41,6 +54,7 @@ import company from '../../assets/company.jpg'
 import company1 from '../../assets/company1.png'
 import company2 from '../../assets/company2.jpg'
 import company3 from '../../assets/company3.png'
+import company4 from '../../assets/company4.png'
 
 
 
@@ -62,6 +76,15 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 }, []);
+
+const handleButtonClick = () => {
+  const email = 'reza.kamrul@octalink-bd.com'
+  const subject = encodeURIComponent('Subject Here')
+  const body = encodeURIComponent('Body content here')
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`
+
+  window.open(mailtoLink, '_blank')
+}
 
 
 const { register, handleSubmit, reset, formState: { errors } } = useForm({
@@ -172,7 +195,7 @@ const onSubmit = async (data) => {
         <h2 className='font-sans tracking-[2px] font-semibold text-[14px] text-[#797F54]'>ABOUT OUR JOURNEY</h2>
         <p className='text-5xl text-start font-normal  text-black'>We Provide The Best Textile Industry Since 1998</p>
         <p className='text-[14px]  font-sans text-start font-semibold  text-gray-600'>At OCTALINK GLOBAL SOURCING, we take immense pride in being at the forefront of the textile industry. Our commitment to excellence, innovation, and sustainability has positioned us as a leader in providing the highest quality fabrics and services. Our journey began with a simple yet powerful vision: to revolutionize the textile industry with unparalleled products and customer-centric services. Over the years, we have built a reputation for delivering exceptional quality, leveraging cutting-edge technology, and embracing sustainable practices.</p>
-        <Link to='/contact'><button className="text-[14px] xl:w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">CONTACT US</button></Link>
+        <button onClick={handleButtonClick} className="text-[14px] xl:w-1/3 text-white font-sans font-medium mt-10 bg-black translate-y-[40px]  px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">CONTACT US</button>
       </div>
 
       </div>
@@ -197,6 +220,14 @@ const onSubmit = async (data) => {
       <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand13} alt="" />
       <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand14} alt="" />
       <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand15} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand16} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand17} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand18} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand19} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand20} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand21} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand22} alt="" />
+      <img className="h-[100px] w-[200px] rounded-lg mr-28" src={brand23} alt="" />
     </Marquee>
         </div>
         
@@ -377,7 +408,7 @@ const onSubmit = async (data) => {
 {/* Name And Position */}
 <div className='flex flex-col items-center'>
 <h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Md. Kamrul Hasan Reza</h2>
-<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Provider & CEO</p>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">CEO & Proprietor</p>
 </div>
 
 </div>
@@ -403,7 +434,7 @@ const onSubmit = async (data) => {
 </div>
 <div className='flex flex-col items-center'>
 <h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Saiful Islam Anik</h2>
-<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">The Head Designer</p>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Head of Designer</p>
 </div>
 </div>
 </div>
@@ -414,7 +445,7 @@ const onSubmit = async (data) => {
 <img 
   src={company1} 
   alt="Sample" 
-  className="w-full h-full object-cover rounded-lg"
+  className="w-full h-full object-cover rounded-lg bg-white"
 />
 
 {/* Overlay */}
@@ -428,7 +459,7 @@ const onSubmit = async (data) => {
 </div>
 <div className='flex flex-col items-center'>
 <h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">A S M Masud</h2>
-<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Merchandising Manager</p>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">SR. Manager</p>
 </div>
 </div>
 </div>
@@ -437,7 +468,7 @@ const onSubmit = async (data) => {
 <div className="relative group h-[350px] w-[250px] rounded-b-[200px] rounded-t-[200px]  overflow-hidden ">
 {/* Image */}
 <img 
-  src={member4} 
+  src={company4} 
   alt="Sample" 
   className="w-full h-full object-cover rounded-lg"
 />
@@ -452,8 +483,8 @@ const onSubmit = async (data) => {
 
 </div>
 <div className='flex flex-col items-center'>
-<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Md. Raju</h2>
-<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Merchandising Manager</p>
+<h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Nur Amin Raju</h2>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">AGM</p>
 </div>
 </div>
 </div>
@@ -479,7 +510,7 @@ const onSubmit = async (data) => {
 </div>
 <div className='flex flex-col items-center'>
 <h2 className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Saiful Islam Sadek</h2>
-<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Quality Manager</p>
+<p className="rounded-[50%] text-white text-[15px] p-[7px] duration-700 opacity-0 group-hover:opacity-100 transition-opacity  ease-in-out">Manager Quality</p>
 </div>
 </div>
 </div>
@@ -526,7 +557,7 @@ const onSubmit = async (data) => {
 
       </div>
 
-      <Link to='/contact'><button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
+      <button onClick={handleButtonClick} className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
 </div>
 
 

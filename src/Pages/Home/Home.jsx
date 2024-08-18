@@ -24,6 +24,17 @@ import brand12 from '../../assets/brand12.png'
 import brand13 from '../../assets/brand13.png'
 import brand14 from '../../assets/brand14.png'
 import brand15 from '../../assets/brand15.jpg'
+import brand16 from '../../assets/brand16.JPG'
+import brand17 from '../../assets/brand17.JPG'
+import brand18 from '../../assets/brand18.JPG'
+import brand19 from '../../assets/brand19.JPG'
+import brand20 from '../../assets/brand20.JPG'
+import brand21 from '../../assets/brand21.JPG'
+import brand22 from '../../assets/brand22.JPG'
+import brand23 from '../../assets/brand23.webp'
+
+
+
 
 import icon1 from '../../assets/icon1.png'
 import icon2 from '../../assets/icon2.png'
@@ -99,6 +110,15 @@ const Home = () => {
     }
   });
 
+  const handleButtonClick = () => {
+    const email = 'reza.kamrul@octalink-bd.com'
+    const subject = encodeURIComponent('Subject Here')
+    const body = encodeURIComponent('Body content here')
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`
+
+    window.open(mailtoLink, '_blank')
+  }
+
 
 
   
@@ -130,7 +150,7 @@ const Home = () => {
     <p className="text-center w-[300px] md:w-[400px] lg:w-[400px] xl:w-[500px] text-gray-500">Discover timeless fashion crafted for the discerning and stylish. Our curated collections blend classic elegance with contemporary trends, redefining your wardrobe with every piece.</p>
     <div className="flex gap-4 items-center mb-10 mt-10">
       <Link to='/login'><button className="text-white text-[14px] font-sans font-semibold h-[40px]   w-[120px] md:w-[150px] lg:w-[150px] xl:w-[150px] bg-black hover:bg-[#797F54] duration-300">GET STARTED</button></Link>
-      <Link to='/contact'><button className="text-black text-[14px] font-sans font-semibold h-[40px] w-[120px] md:w-[150px] lg:w-[150px] xl:w-[150px] bg-inherit border-[1px] border-black hover:bg-[#797F54] hover:border-[#797F54] hover:text-white duration-300">CONTACT US</button></Link>
+      <button onClick={handleButtonClick} className="text-black text-[14px] font-sans font-semibold h-[40px] w-[120px] md:w-[150px] lg:w-[150px] xl:w-[150px] bg-inherit border-[1px] border-black hover:bg-[#797F54] hover:border-[#797F54] hover:text-white duration-300">CONTACT US</button>
     </div>
 
     <Link to='/about'><p className="mb-5 font-sans font-normal text-gray-500">or <span className="underline underline-offset-[3px]">Discover our story</span></p></Link>
@@ -168,7 +188,7 @@ const Home = () => {
         <p>Modern Elegance</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img3} alt="" />
         <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
-          <p>WINTER</p>
+          <p>SPRING</p>
           <p>OUTFIT</p>
         </div>
       </div>
@@ -177,7 +197,7 @@ const Home = () => {
         <p>Trendsetters</p>
         <img className="h-[340px] w-[272px] hover:translate-y-[-10px] duration-700" src={img4} alt="" />
         <div className="flex flex-row text-[#797F54] text-[14px] items-center justify-between font-sans font-normal  w-full">
-          <p>SUMMER</p>
+          <p>FALL</p>
           <p>OUTFIT</p>
         </div>
       </div>
@@ -205,6 +225,14 @@ const Home = () => {
       <img className="h-[100px] w-[200px] mr-28" src={brand13} alt="" />
       <img className="h-[100px] w-[200px] mr-28" src={brand14} alt="" />
       <img className="h-[100px] w-[200px] mr-28" src={brand15} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand16} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand17} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand18} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand19} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand20} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand21} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand22} alt="" />
+      <img className="h-[100px] w-[200px] mr-28" src={brand23} alt="" />
     </Marquee>
 
     <hr className="w-full border-t-[1px] border-gray-600 my-24" />
@@ -237,7 +265,7 @@ const Home = () => {
 
 </div>
 
-      <Link to='/contact'><button className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
+      <button onClick={handleButtonClick} className="text-[14px] font-sans font-medium mt-10 bg-white text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
     </div>
 
 
@@ -276,7 +304,7 @@ const Home = () => {
           <h2 className="text-3xl font-normal tracking-[5px] mb-5">Have a project? Let's Talk!</h2>
           <div className=" flex items-center justify-between">
           <img className="w-[130px] md:w-[140px] lg:w-[140px] xl:w-[150px] translate-x-[-50px] translate-y-[40px]" src={logo} alt="" />
-          <Link to='/contact'><button className="text-[10px] md:text-[14px] lg:text-[14px] xl:text-[14px] font-sans font-medium mt-10 bg-white translate-y-[40px] text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button></Link>
+          <button onClick={handleButtonClick} className="text-[10px] md:text-[14px] lg:text-[14px] xl:text-[14px] font-sans font-medium mt-10 bg-white translate-y-[40px] text-black px-8 py-3 hover:text-white hover:bg-[#797F54] duration-500">BOOK AN APPOINTMENT</button>
 
           </div>
           

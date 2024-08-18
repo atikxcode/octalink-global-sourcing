@@ -10,8 +10,8 @@ const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const categoryOptions = {
   kids: ["coat-pant", "denim", "hoodie", "jacket", "shorts", "swipe-shirt", "t-shirt", "trouser", "sweaters"],
-  women: ["coat-long-pants", "coat-tops", "denim-long-pants", "ladies-skirts", "tops", "twill", "sweaters"],
-  men: ["coat-jacket", "hoodie", "mens-cargo-pant", "mens-long-pant", "polo-shirt", "sweaters", "swipe-shirt", "t-shirt"]
+  women: ["coat-long-pants", "coat-tops", "denim-long-pants", "ladies-skirts", "tops", "twill", "sweaters", "ladies-leggings", "ladies-jumpsuit", "swimming-shorts","ladies-shorts", "blazer", "jacket", "overalls"],
+  men: ["coat-jacket", "hoodie", "mens-cargo-pant", "mens-long-pant", "polo-shirt", "sweaters", "swipe-shirt", "t-shirt", "swimming-shorts", "blazer", "mens-shorts","panjabi", "jacket", "shirt"]
 };
 
 const AddProducts = () => {

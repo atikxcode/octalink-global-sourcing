@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const categoryOptions = {
-  kids: ["coat-pant", "denim", "sweaters", "hoodie", "jacket", "shorts", "swipe-shirt", "t-shirt", "trouser"],
-  women: ["coat-long-pants", "coat-tops", "denim-long-pants", "ladies-skirts", "tops", "twill", "sweaters"],
-  men: ["coat-jacket", "hoodie", "mens-cargo-pant", "mens-long-pant", "polo-shirt", "sweaters", "swipe-shirt", "t-shirt"]
+  kids: ["coat-pant", "denim", "hoodie", "jacket", "shorts", "swipe-shirt", "t-shirt", "trouser", "sweaters"],
+  women: ["coat-long-pants", "coat-tops", "denim-long-pants", "ladies-skirts", "tops", "twill", "sweaters", "ladies-leggings", "ladies-jumpsuit", "swimming-shorts","ladies-shorts", "jacket", "blazer", "overalls"],
+  men: ["coat-jacket", "hoodie", "mens-cargo-pant", "mens-long-pant", "polo-shirt", "sweaters", "swipe-shirt", "t-shirt", "swimming-shorts", "blazer", "mens-shorts", "panjabi", "jacket", "shirt"]
 };
 
 
@@ -203,7 +203,7 @@ const EditProducts = () => {
             <li onClick={() => handleSubcategorySelect('swipe-shirt')}><a>Swipe Shirt</a></li>
             <li onClick={() => handleSubcategorySelect('t-shirt')}><a>T-shirt</a></li>
             <li onClick={() => handleSubcategorySelect('trouser')}><a>Trouser</a></li>
-            {/* <li onClick={() => handleSubcategorySelect('kids')}><a>Sweaters</a></li> */}
+           
           </ul>
         </li>
         <li>
@@ -216,7 +216,15 @@ const EditProducts = () => {
             <li onClick={() => handleSubcategorySelect('tops')}><a>Tops</a></li>
             <li onClick={() => handleSubcategorySelect('twill')}><a>Twill</a></li>
             <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
-            {/* <li onClick={() => handleSubcategorySelect('coat-pant')}><a>Sweaters</a></li> */}
+            <li onClick={() => handleSubcategorySelect('ladies-leggings')}><a>Ladies Leggings</a></li>
+            <li onClick={() => handleSubcategorySelect('ladies-jumpsuit')}><a>ladies Jumpsuit</a></li>
+            <li onClick={() => handleSubcategorySelect('swimming-shorts')}><a>Swimming Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('blazer')}><a>Blazer</a></li>
+            <li onClick={() => handleSubcategorySelect('overalls')}><a>Overalls</a></li>
+            <li onClick={() => handleSubcategorySelect('blazer')}><a>Blazer</a></li>
+            <li onClick={() => handleSubcategorySelect('ladies-shorts')}><a>Ladies Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('jacket')}><a>Jacket</a></li>
+  
           </ul>
         </li>
         <li>
@@ -230,7 +238,11 @@ const EditProducts = () => {
             <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
             <li onClick={() => handleSubcategorySelect('swipe-shirt')}><a>Swipe Shirt</a></li>
             <li onClick={() => handleSubcategorySelect('t-shirt')}><a>T-Shirt</a></li>
-            {/* <li onClick={() => handleSubcategorySelect('coat-long-pants')}><a>Sweaters</a></li> */}
+            <li onClick={() => handleSubcategorySelect('swimming-shorts')}><a>Swimming Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('mens-shorts')}><a>Mens Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('panjabi')}><a>Panjabi</a></li>
+            <li onClick={() => handleSubcategorySelect('jacket')}><a>Jacket</a></li>
+            <li onClick={() => handleSubcategorySelect('shirt')}><a>Shirt</a></li>
           </ul>
         </li>
       </ul>
@@ -259,13 +271,21 @@ const EditProducts = () => {
         <details>
           <summary onClick={() => handleCategorySelect('women')}>Women</summary>
           <ul className="p-2 w-36">
-            <li onClick={() => handleSubcategorySelect('coat-long-pants')}><a>Coat Long Pants</a></li>
+          <li onClick={() => handleSubcategorySelect('coat-long-pants')}><a>Coat Long Pants</a></li>
             <li onClick={() => handleSubcategorySelect('coat-tops')}><a>Coat Tops</a></li>
             <li onClick={() => handleSubcategorySelect('denim-long-pants')}><a>Denim Long Pants</a></li>
             <li onClick={() => handleSubcategorySelect('ladies-skirts')}><a>Ladies Skirts</a></li>
             <li onClick={() => handleSubcategorySelect('tops')}><a>Tops</a></li>
             <li onClick={() => handleSubcategorySelect('twill')}><a>Twill</a></li>
             <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
+            <li onClick={() => handleSubcategorySelect('ladies-leggings')}><a>Ladies Leggings</a></li>
+            <li onClick={() => handleSubcategorySelect('ladies-jumpsuit')}><a>ladies Jumpsuit</a></li>
+            <li onClick={() => handleSubcategorySelect('swimming-shorts')}><a>Swimming Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('blazer')}><a>Blazer</a></li>
+            <li onClick={() => handleSubcategorySelect('overalls')}><a>Overalls</a></li>
+            <li onClick={() => handleSubcategorySelect('blazer')}><a>Blazer</a></li>
+            <li onClick={() => handleSubcategorySelect('ladies-shorts')}><a>Ladies Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('jacket')}><a>Jacket</a></li>
 
           </ul>
         </details>
@@ -275,7 +295,8 @@ const EditProducts = () => {
           <summary onClick={() => handleCategorySelect('men')}>Mens</summary>
           <ul className="p-2 w-36">
 
-            <li onClick={() => handleSubcategorySelect('coat-jacket')}><a>Coat Jacket</a></li>
+          <li onClick={() => handleSubcategorySelect('coat-jacket')}><a>Coat Jacket</a></li>
+          <li onClick={() => handleSubcategorySelect('coat-jacket')}><a>Coat Jacket</a></li>
             <li onClick={() => handleSubcategorySelect('hoodie')}><a>Hoodie</a></li>
             <li onClick={() => handleSubcategorySelect('mens-cargo-pant')}><a>Mens Cargo Pant</a></li>
             <li onClick={() => handleSubcategorySelect('mens-long-pant')}><a>Mens Long Pant</a></li>
@@ -283,6 +304,11 @@ const EditProducts = () => {
             <li onClick={() => handleSubcategorySelect('sweaters')}><a>Sweaters</a></li>
             <li onClick={() => handleSubcategorySelect('swipe-shirt')}><a>Swipe Shirt</a></li>
             <li onClick={() => handleSubcategorySelect('t-shirt')}><a>T-Shirt</a></li>
+            <li onClick={() => handleSubcategorySelect('swimming-shorts')}><a>Swimming Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('mens-shorts')}><a>Mens Shorts</a></li>
+            <li onClick={() => handleSubcategorySelect('panjabi')}><a>Panjabi</a></li>
+            <li onClick={() => handleSubcategorySelect('jacket')}><a>Jacket</a></li>
+            <li onClick={() => handleSubcategorySelect('shirt')}><a>Shirt</a></li>
           </ul>
         </details>
       </li>
